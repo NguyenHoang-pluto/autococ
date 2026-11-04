@@ -1,0 +1,556 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AutoCoC — Bot farm Clash of Clans</title>
+<meta name="description" content="Tải AutoCoC cho Windows (LDPlayer) và Android: tự farm Clash of Clans, đầy kho tự nâng tường. Hướng dẫn cài đặt từng bước.">
+<meta property="og:title" content="AutoCoC — Bot farm Clash of Clans">
+<meta property="og:description" content="Tự farm, đầy kho tự nâng tường. Bản Windows (LDPlayer) và Android.">
+<meta property="og:image" content="https://nguyenhoang-pluto.github.io/autococ/assets/logo.png">
+<meta property="og:url" content="https://nguyenhoang-pluto.github.io/autococ/">
+<meta name="theme-color" content="#0b1426">
+<link rel="icon" href="assets/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Be+Vietnam+Pro:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #0b1426;
+    --bg-2: #111d36;
+    --card: rgba(17, 29, 54, .82);
+    --card-2: rgba(25, 40, 72, .9);
+    --line: rgba(255, 255, 255, .09);
+    --text: #f2f5fb;
+    --muted: #a9b4cc;
+    --gold: #ffd23f;
+    --gold-2: #f4a51c;
+    --gold-edge: #a8650a;
+    --green: #8ee03a;
+    --green-2: #4fae1c;
+    --green-edge: #2f7410;
+    --blue: #3b7bff;
+    --pink: #e24bff;
+    --radius: 18px;
+    --shadow: 0 18px 50px rgba(0, 0, 0, .45);
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    font-family: "Be Vietnam Pro", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+  body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    background:
+      radial-gradient(1200px 600px at 75% -10%, rgba(59, 123, 255, .28), transparent 60%),
+      linear-gradient(180deg, rgba(11, 20, 38, .62) 0%, rgba(11, 20, 38, .92) 45%, var(--bg) 100%),
+      url("assets/bg.jpg") center top / cover no-repeat;
+  }
+  a { color: var(--gold); }
+  img { max-width: 100%; display: block; }
+  .wrap { width: min(1120px, 100% - 32px); margin-inline: auto; }
+  h1, h2, h3, .brand, .btn { font-family: "Baloo 2", system-ui, sans-serif; }
+  h1, h2, h3 { line-height: 1.15; margin: 0; }
+  .stroke {
+    color: #fff;
+    text-shadow: 0 3px 0 rgba(0, 0, 0, .55), 0 0 1px #000, 1px 1px 0 #1a1a1a, -1px -1px 0 #1a1a1a,
+      1px -1px 0 #1a1a1a, -1px 1px 0 #1a1a1a;
+  }
+
+  /* ---------------------------------------------------------------- header */
+  header {
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    backdrop-filter: blur(12px);
+    background: rgba(11, 20, 38, .72);
+    border-bottom: 1px solid var(--line);
+  }
+  .nav { display: flex; align-items: center; gap: 18px; height: 64px; }
+  .brand { display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--text); font-size: 24px; font-weight: 800; }
+  .brand img { width: 40px; height: 40px; border-radius: 10px; }
+  .nav nav { margin-left: auto; display: flex; gap: 4px; }
+  .nav nav a { color: var(--muted); text-decoration: none; font-weight: 600; font-size: 15px; padding: 8px 12px; border-radius: 10px; }
+  .nav nav a:hover { color: var(--text); background: rgba(255, 255, 255, .06); }
+
+  /* ---------------------------------------------------------------- buttons */
+  .btn {
+    --top: var(--gold); --bot: var(--gold-2); --edge: var(--gold-edge);
+    display: inline-flex; align-items: center; gap: 12px;
+    padding: 12px 22px 14px; min-height: 64px;
+    border-radius: 16px; border: 2px solid rgba(0, 0, 0, .55);
+    background: linear-gradient(180deg, var(--top), var(--bot));
+    box-shadow: 0 6px 0 var(--edge), 0 10px 24px rgba(0, 0, 0, .35), inset 0 2px 0 rgba(255, 255, 255, .55);
+    color: #fff; text-decoration: none; font-weight: 800; font-size: 22px; line-height: 1.1;
+    transition: transform .08s ease, box-shadow .08s ease, filter .15s ease;
+    cursor: pointer;
+  }
+  .btn:hover { filter: brightness(1.06); }
+  .btn:active { transform: translateY(4px); box-shadow: 0 2px 0 var(--edge), 0 6px 14px rgba(0, 0, 0, .35), inset 0 2px 0 rgba(255, 255, 255, .5); }
+  .btn:focus-visible { outline: 3px solid #fff; outline-offset: 3px; }
+  .btn .label { display: flex; flex-direction: column; text-shadow: 0 2px 0 rgba(0, 0, 0, .45), 0 0 2px rgba(0, 0, 0, .6); }
+  .btn small { font-family: "Be Vietnam Pro", sans-serif; font-weight: 600; font-size: 13px; opacity: .95; }
+  .btn svg { width: 30px; height: 30px; flex: none; filter: drop-shadow(0 2px 0 rgba(0, 0, 0, .4)); }
+  .btn.green { --top: var(--green); --bot: var(--green-2); --edge: var(--green-edge); }
+  .btn.small { min-height: 44px; padding: 8px 16px 10px; font-size: 17px; border-radius: 12px; box-shadow: 0 4px 0 var(--edge), inset 0 2px 0 rgba(255, 255, 255, .5); }
+  .btn.small:active { transform: translateY(3px); box-shadow: 0 1px 0 var(--edge); }
+
+  /* ---------------------------------------------------------------- hero */
+  .hero { padding: 64px 0 40px; }
+  .hero-grid { display: grid; grid-template-columns: 1.15fr .85fr; gap: 40px; align-items: center; }
+  .pill { display: inline-flex; align-items: center; gap: 8px; padding: 6px 14px; border-radius: 999px; background: rgba(255, 210, 63, .12); border: 1px solid rgba(255, 210, 63, .35); color: var(--gold); font-weight: 600; font-size: 14px; }
+  .hero h1 { font-size: clamp(36px, 5.2vw, 58px); margin: 16px 0 14px; font-weight: 800; letter-spacing: -.5px; text-wrap: balance; }
+  .hero h1 .hl { color: var(--gold); }
+  .hero p.lead { font-size: 18px; color: #d7deee; margin: 0 0 28px; max-width: 560px; }
+  .cta { display: flex; flex-wrap: wrap; gap: 16px; }
+  .meta { margin-top: 22px; display: flex; flex-wrap: wrap; gap: 10px 22px; color: var(--muted); font-size: 14px; }
+  .meta b { color: var(--text); }
+  .meta .dot { display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: var(--green); margin-right: 6px; box-shadow: 0 0 10px var(--green); }
+  .hero-art { position: relative; justify-self: center; width: min(360px, 80vw); aspect-ratio: 1; }
+  .hero-art .glow { position: absolute; inset: 8%; border-radius: 40px; background: radial-gradient(circle, rgba(59, 123, 255, .55), transparent 70%); filter: blur(30px); }
+  .hero-art .logo { position: relative; width: 100%; border-radius: 22%; box-shadow: var(--shadow); animation: float 6s ease-in-out infinite; }
+  .hero-art .res { position: absolute; width: 64px; filter: drop-shadow(0 8px 10px rgba(0, 0, 0, .45)); animation: float 5s ease-in-out infinite; }
+  .hero-art .r1 { left: -26px; top: 18%; animation-delay: -1s; }
+  .hero-art .r2 { right: -22px; top: 52%; animation-delay: -2.5s; }
+  .hero-art .r3 { left: 8%; bottom: -18px; width: 52px; animation-delay: -3.5s; }
+  @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
+
+  /* ---------------------------------------------------------------- sections */
+  section { padding: 56px 0; }
+  .sec-head { text-align: center; margin-bottom: 34px; }
+  .sec-head h2 { font-size: clamp(30px, 4vw, 42px); font-weight: 800; }
+  .sec-head p { color: var(--muted); margin: 8px auto 0; max-width: 640px; text-wrap: balance; }
+  .card { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); box-shadow: var(--shadow); backdrop-filter: blur(8px); }
+
+  .features { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+  .feature { padding: 24px; }
+  .feature .ico { width: 52px; height: 52px; border-radius: 14px; display: grid; place-items: center; margin-bottom: 14px; background: linear-gradient(180deg, #2a4a8f, #1b3266); border: 1px solid rgba(255, 255, 255, .12); }
+  .feature .ico img { width: 34px; }
+  .feature .ico svg { width: 28px; height: 28px; color: var(--gold); }
+  .feature h3 { font-size: 22px; font-weight: 700; margin-bottom: 6px; }
+  .feature p { margin: 0; color: var(--muted); font-size: 15px; }
+
+  /* tabs */
+  .tabs { display: flex; justify-content: center; gap: 10px; margin-bottom: 24px; flex-wrap: wrap; }
+  .tab { font-family: "Baloo 2", sans-serif; font-weight: 700; font-size: 18px; color: var(--muted); background: rgba(255, 255, 255, .05); border: 1px solid var(--line); border-radius: 999px; padding: 8px 20px; cursor: pointer; display: inline-flex; align-items: center; gap: 8px; }
+  .tab svg { width: 20px; height: 20px; }
+  .tab[aria-selected="true"] { color: #1d1400; background: linear-gradient(180deg, var(--gold), var(--gold-2)); border-color: rgba(0, 0, 0, .4); box-shadow: 0 3px 0 var(--gold-edge); }
+  .panel[hidden] { display: none; }
+  .need { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-bottom: 18px; }
+  .need div { padding: 14px 16px; border-radius: 14px; background: rgba(255, 255, 255, .04); border: 1px dashed rgba(255, 255, 255, .14); font-size: 14px; color: var(--muted); }
+  .need b { display: block; color: var(--text); font-size: 15px; }
+  .steps { list-style: none; padding: 0; margin: 0; display: grid; gap: 14px; counter-reset: step; }
+  .step { position: relative; padding: 20px 22px 20px 82px; }
+  .step::before {
+    counter-increment: step; content: counter(step);
+    position: absolute; left: 20px; top: 18px; width: 44px; height: 44px; border-radius: 12px;
+    display: grid; place-items: center; font-family: "Baloo 2", sans-serif; font-weight: 800; font-size: 24px; color: #fff;
+    background: linear-gradient(180deg, var(--gold), var(--gold-2)); border: 2px solid rgba(0, 0, 0, .5);
+    box-shadow: 0 4px 0 var(--gold-edge); text-shadow: 0 2px 0 rgba(0, 0, 0, .45);
+  }
+  .step h3 { font-size: 21px; font-weight: 700; margin-bottom: 4px; }
+  .step p { margin: 4px 0 0; color: #d3dbeb; font-size: 15px; }
+  .step .path { display: inline-block; font-weight: 600; color: var(--text); background: rgba(255, 255, 255, .07); border: 1px solid var(--line); border-radius: 8px; padding: 1px 8px; margin: 2px 0; }
+  .tip { margin-top: 10px; padding: 10px 14px; border-radius: 12px; font-size: 14px; background: rgba(255, 210, 63, .09); border: 1px solid rgba(255, 210, 63, .28); color: #f6e7b4; }
+  .tip.warn { background: rgba(255, 99, 99, .08); border-color: rgba(255, 120, 120, .3); color: #ffd3d3; }
+  .step .btn { margin-top: 12px; }
+
+  /* key */
+  .key-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+  .key-step { padding: 24px; text-align: center; }
+  .key-step .num { font-family: "Baloo 2", sans-serif; font-size: 46px; font-weight: 800; color: var(--gold); line-height: 1; }
+  .key-step h3 { font-size: 21px; margin: 8px 0 6px; }
+  .key-step p { margin: 0; color: var(--muted); font-size: 15px; }
+  .contact { margin-top: 22px; padding: 22px; display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 14px; text-align: center; }
+  .contact p { margin: 0; width: 100%; color: var(--muted); }
+
+  /* faq */
+  .faq { display: grid; gap: 12px; max-width: 860px; margin-inline: auto; }
+  details { padding: 0; }
+  summary { list-style: none; cursor: pointer; padding: 18px 56px 18px 22px; font-weight: 700; font-size: 17px; position: relative; }
+  summary::-webkit-details-marker { display: none; }
+  summary::after { content: "+"; position: absolute; right: 22px; top: 50%; transform: translateY(-50%); font-family: "Baloo 2", sans-serif; font-size: 28px; color: var(--gold); transition: transform .2s; }
+  details[open] summary::after { transform: translateY(-50%) rotate(45deg); }
+  details .ans { padding: 0 22px 18px; color: #cfd7e8; font-size: 15px; }
+  details .ans p { margin: 0 0 8px; }
+
+  /* changelog */
+  .changes { max-width: 860px; margin: 22px auto 0; padding: 18px 22px; }
+  .changes h3 { font-size: 20px; margin-bottom: 6px; }
+  .changes ul { margin: 6px 0 0; padding-left: 20px; color: #cfd7e8; }
+  .changes[hidden] { display: none; }
+
+  footer { padding: 36px 0 48px; color: var(--muted); font-size: 13px; text-align: center; border-top: 1px solid var(--line); }
+  footer p { margin: 6px 0; }
+
+  @media (max-width: 900px) {
+    .hero-grid { grid-template-columns: 1fr; text-align: center; }
+    .hero p.lead { margin-inline: auto; }
+    .cta, .meta { justify-content: center; }
+    .hero-art { order: -1; width: min(240px, 62vw); }
+    .features, .key-grid { grid-template-columns: 1fr 1fr; }
+    .need { grid-template-columns: 1fr; }
+  }
+  @media (max-width: 640px) {
+    .nav nav { display: none; }
+    .nav .btn.small { margin-left: auto; }
+    .hero { padding-top: 36px; }
+    .hero h1 { font-size: 31px; }
+    .features, .key-grid { grid-template-columns: 1fr; }
+    .cta .btn { width: 100%; justify-content: center; }
+    .step { padding: 18px 18px 18px 72px; }
+    .step::before { left: 16px; width: 40px; height: 40px; font-size: 22px; }
+  }
+  @media (min-width: 641px) { .nav .btn.small { display: none; } }
+  @media (prefers-reduced-motion: reduce) { * { animation: none !important; transition: none !important; scroll-behavior: auto !important; } }
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-win" viewBox="0 0 24 24"><path fill="currentColor" d="M3 5.1 10.4 4v7.2H3V5.1zm0 13.8L10.4 20v-7.1H3v6zm8.3 1.2L21 21.5v-8.6h-9.7v7.2zm0-16.2v7.3H21V2.5l-9.7 1.4z"/></symbol>
+  <symbol id="i-android" viewBox="0 0 24 24"><path fill="currentColor" d="M17.6 9.48 19.44 6.3a.38.38 0 0 0-.66-.38L16.9 9.14a11.4 11.4 0 0 0-9.8 0L5.22 5.92a.38.38 0 0 0-.66.38L6.4 9.48A10.8 10.8 0 0 0 1 18h22a10.8 10.8 0 0 0-5.4-8.52zM7 15.25a1.25 1.25 0 1 1 0-2.5 1.25 1.25 0 0 1 0 2.5zm10 0a1.25 1.25 0 1 1 0-2.5 1.25 1.25 0 0 1 0 2.5z"/></symbol>
+  <symbol id="i-search" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></g></symbol>
+  <symbol id="i-sword" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 17.5 3 6V3h3l11.5 11.5"/><path d="m13 19 6-6M16 16l4 4M19 21l2-2"/></g></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></g></symbol>
+  <symbol id="i-zap" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round" d="M13 2 3 14h9l-1 8 10-12h-9l1-8z"/></symbol>
+  <symbol id="i-devices" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="14" height="10" rx="2"/><path d="M6 18h6"/><rect x="17" y="8" width="5" height="12" rx="1.5"/></g></symbol>
+  <symbol id="i-chat" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round" d="M21 12a8 8 0 0 1-11.7 7.1L3 21l1.9-6.3A8 8 0 1 1 21 12z"/></symbol>
+</svg>
+
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#top"><img src="assets/logo.png" alt="">AutoCoC</a>
+    <nav aria-label="Mục lục">
+      <a href="#tinh-nang">Tính năng</a>
+      <a href="#cai-dat">Cài đặt</a>
+      <a href="#key">Nhận key</a>
+      <a href="#hoi-dap">Hỏi đáp</a>
+    </nav>
+    <a class="btn small" href="#tai-ve">Tải về</a>
+  </div>
+</header>
+
+<main id="top">
+  <!-- ============================================================ HERO -->
+  <section class="hero" id="tai-ve">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="pill">⚡ Bot farm Clash of Clans</span>
+        <h1 class="stroke">Tự farm tài nguyên,<br><span class="hl">đầy kho tự nâng tường</span></h1>
+        <p class="lead">AutoCoC tự tìm làng nhiều tài nguyên, thả quân – anh hùng – phép, kho gần đầy thì nâng tường tới khi cạn rồi đánh tiếp. Chạy trên giả lập LDPlayer (máy tính) hoặc điện thoại Android.</p>
+        <div class="cta">
+          <a class="btn" id="dl-win" href="#cai-dat">
+            <svg><use href="#i-win"/></svg>
+            <span class="label">Tải cho Windows<small id="dl-win-sub">Giả lập LDPlayer 9</small></span>
+          </a>
+          <a class="btn green" id="dl-apk" href="#cai-dat">
+            <svg><use href="#i-android"/></svg>
+            <span class="label">Tải cho Android<small id="dl-apk-sub">File APK, không cần root</small></span>
+          </a>
+        </div>
+        <div class="meta">
+          <span><span class="dot"></span><span id="ver">Bản mới nhất</span></span>
+          <span>Cần <b>key</b> để chạy — <a href="#key">cách nhận key</a></span>
+        </div>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <div class="glow"></div>
+        <img class="logo" src="assets/logo.png" alt="">
+        <img class="res r1" src="assets/gold.png" alt="">
+        <img class="res r2" src="assets/elixir.png" alt="">
+        <img class="res r3" src="assets/gem.png" alt="">
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================== FEATURES -->
+  <section id="tinh-nang">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2 class="stroke">Bot làm được gì?</h2>
+        <p>Bạn chỉ cần mở game ở màn hình làng rồi bấm Bắt đầu — mọi việc còn lại bot tự làm.</p>
+      </div>
+      <div class="features">
+        <article class="card feature">
+          <div class="ico"><svg><use href="#i-search"/></svg></div>
+          <h3>Tìm làng đúng ý</h3>
+          <p>Đọc số vàng, dầu, dầu đen của làng địch; chưa đủ mức bạn đặt thì bấm Tiếp theo. Tìm lâu thì tự hạ dần điều kiện.</p>
+        </article>
+        <article class="card feature">
+          <div class="ico"><svg><use href="#i-sword"/></svg></div>
+          <h3>Đánh nhanh, thả đủ quân</h3>
+          <p>8 hướng đánh, rải hàng hoặc dồn góc; thả đúng số quân trên thẻ, thả phép vào chỗ quân đang đứng, tự bật kỹ năng anh hùng.</p>
+        </article>
+        <article class="card feature">
+          <div class="ico"><img src="assets/gold.png" alt=""></div>
+          <h3>Đầy kho tự nâng tường</h3>
+          <p>Kho vàng hoặc dầu gần đầy thì chọn nhiều đoạn tường cùng cấp, nâng một lần cho tới khi cạn, rồi quay lại farm cho đầy tiếp.</p>
+        </article>
+        <article class="card feature">
+          <div class="ico"><svg><use href="#i-shield"/></svg></div>
+          <h3>Giữ an toàn tài nguyên</h3>
+          <p>Luôn chừa lại số vàng / dầu bạn đặt. Không bao giờ dùng ngọc, Nhẫn tường hay dầu đen để nâng tường.</p>
+        </article>
+        <article class="card feature">
+          <div class="ico"><svg><use href="#i-zap"/></svg></div>
+          <h3>Tự xử lý sự cố</h3>
+          <p>Mất kết nối thì tự tải lại game, tự đóng thông báo lạ, tự kết thúc trận khi không phá thêm được để đánh trận mới.</p>
+        </article>
+        <article class="card feature">
+          <div class="ico"><svg><use href="#i-devices"/></svg></div>
+          <h3>Máy tính và điện thoại</h3>
+          <p>Bản Windows chạy với giả lập LDPlayer 9; bản Android chạy thẳng trên điện thoại, không cần root. Dùng chung một hệ thống key.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ GUIDE -->
+  <section id="cai-dat">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2 class="stroke">Hướng dẫn cài đặt</h2>
+        <p>Chọn bản bạn dùng, làm lần lượt từng bước. Mất khoảng 5–10 phút.</p>
+      </div>
+      <div class="tabs" role="tablist">
+        <button class="tab" role="tab" id="tab-win" aria-controls="panel-win" aria-selected="true"><svg><use href="#i-win"/></svg>Windows · LDPlayer</button>
+        <button class="tab" role="tab" id="tab-apk" aria-controls="panel-apk" aria-selected="false"><svg><use href="#i-android"/></svg>Android · điện thoại</button>
+      </div>
+
+      <div class="panel" id="panel-win" role="tabpanel" aria-labelledby="tab-win">
+        <div class="need">
+          <div><b>Máy tính Windows 10 / 11</b>Đủ khoẻ để chạy giả lập Android</div>
+          <div><b>Giả lập LDPlayer 9</b>Miễn phí tại ldplayer.net</div>
+          <div><b>Game để tiếng Việt</b>Bot đọc giao diện tiếng Việt</div>
+        </div>
+        <ol class="steps">
+          <li class="card step">
+            <h3>Cài LDPlayer 9 và Clash of Clans</h3>
+            <p>Tải LDPlayer 9 tại <a href="https://www.ldplayer.net" target="_blank" rel="noopener">ldplayer.net</a>, cài Clash of Clans từ CH Play trong giả lập và đăng nhập tài khoản của bạn.</p>
+            <p>Trong game: <span class="path">Cài đặt → Ngôn ngữ → Tiếng Việt</span></p>
+          </li>
+          <li class="card step">
+            <h3>Chỉnh giả lập cho đúng</h3>
+            <p>Độ phân giải: <span class="path">Cài đặt LDPlayer → Nâng cao → Máy tính bảng 1600 × 900 (DPI 240)</span></p>
+            <p>Bật ADB: <span class="path">Cài đặt LDPlayer → Khác → Gỡ lỗi ADB → Kết nối cục bộ</span></p>
+            <p>Bấm Lưu rồi khởi động lại giả lập.</p>
+            <div class="tip">Bot đo chuẩn trên màn hình 1600 × 900. Để độ phân giải khác bot vẫn tự quy đổi, nhưng 1600 × 900 là chính xác nhất.</div>
+          </li>
+          <li class="card step">
+            <h3>Tải và mở AutoCoC</h3>
+            <p>Tải file <b>AutoCoC-Windows.zip</b>, bấm chuột phải → <b>Giải nén tất cả</b> (đừng mở thẳng trong file nén), rồi bấm đúp <b>AutoCoC.exe</b>.</p>
+            <div class="tip warn">Nếu Windows hiện "Windows đã bảo vệ PC": bấm <b>Thông tin thêm → Vẫn chạy</b>. App chưa có chữ ký số nên Windows chưa nhận ra, không phải virus.</div>
+            <a class="btn small" data-dl="win" href="#">Tải AutoCoC-Windows.zip</a>
+          </li>
+          <li class="card step">
+            <h3>Kích hoạt key</h3>
+            <p>Lần đầu mở, app hiện <b>Mã máy</b>. Bấm sao chép, gửi mã cho admin để nhận key, dán key vào ô rồi bấm <b>Kích hoạt</b>. <a href="#key">Xem cách nhận key</a>.</p>
+          </li>
+          <li class="card step">
+            <h3>Chạy bot</h3>
+            <p>Mở game ở màn hình làng, trong app bấm <b>Bắt đầu</b> (phím F5). Muốn dừng bấm <b>Dừng</b> (F7).</p>
+            <p>Chỉnh điều kiện tìm làng, cách đánh, nâng tường… ở các trang bên trái app. Cài đặt tự lưu.</p>
+          </li>
+        </ol>
+      </div>
+
+      <div class="panel" id="panel-apk" role="tabpanel" aria-labelledby="tab-apk" hidden>
+        <div class="need">
+          <div><b>Android 7.0 trở lên</b>Không cần root</div>
+          <div><b>Clash of Clans đã cài</b>Đã đăng nhập tài khoản</div>
+          <div><b>Game để tiếng Việt</b>Bot đọc giao diện tiếng Việt</div>
+        </div>
+        <ol class="steps">
+          <li class="card step">
+            <h3>Cài app</h3>
+            <p>Tải file <b>AutoCoC.apk</b> rồi mở để cài. Máy hỏi thì cho phép <b>Cài ứng dụng không rõ nguồn gốc</b>. Play Protect cảnh báo thì chọn <b>Vẫn cài</b>.</p>
+            <a class="btn small green" data-dl="apk" href="#">Tải AutoCoC.apk</a>
+          </li>
+          <li class="card step">
+            <h3>Kích hoạt key</h3>
+            <p>Mở AutoCoC, màn hình hiện <b>Mã máy</b> → gửi admin để nhận key → dán key → bấm <b>Kích hoạt</b>.</p>
+          </li>
+          <li class="card step">
+            <h3>Bật Trợ năng</h3>
+            <p>Bấm <b>Bắt đầu</b> → <b>Mở Trợ năng</b> → chọn <b>AutoCoC</b> → <b>Bật</b>. Bot cần quyền này để chạm thay bạn.</p>
+            <div class="tip">Android 13 trở lên, nếu công tắc bị mờ hoặc báo "Cài đặt bị hạn chế": vào <span class="path">Cài đặt → Ứng dụng → AutoCoC → ⋮ (góc trên phải) → Cho phép cài đặt bị hạn chế</span> rồi bật lại.</div>
+          </li>
+          <li class="card step">
+            <h3>Cho phép quay màn hình</h3>
+            <p>Quay lại app, bấm <b>Bắt đầu</b> → cho phép quay màn hình để bot nhìn thấy game. Android 14 trở lên chọn <b>Toàn bộ màn hình</b> (không chọn "Một ứng dụng").</p>
+          </li>
+          <li class="card step">
+            <h3>Chạy bot</h3>
+            <p>App tự mở Clash of Clans và bắt đầu đánh. Trên màn hình game có nút nổi: <b>▶</b> chạy / <b>■</b> dừng, kéo để đổi chỗ.</p>
+            <p>Tắt hẳn: kéo thanh thông báo xuống → AutoCoC → <b>Tắt hẳn</b>.</p>
+            <div class="tip">Màn hình 16:9 là chuẩn nhất. Điện thoại màn dài bot tự căn theo mép, nếu thấy bấm lệch hãy chụp màn hình gửi admin để chỉnh.</div>
+          </li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================== KEY -->
+  <section id="key">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2 class="stroke">Nhận key</h2>
+        <p>Mỗi key gắn với máy của bạn. Bản Windows và Android dùng chung hệ thống key.</p>
+      </div>
+      <div class="key-grid">
+        <div class="card key-step"><div class="num">1</div><h3>Lấy mã máy</h3><p>Mở app AutoCoC, màn hình kích hoạt hiện <b>Mã máy</b> — bấm sao chép.</p></div>
+        <div class="card key-step"><div class="num">2</div><h3>Gửi cho admin</h3><p>Nhắn mã máy cho admin qua các kênh bên dưới để được cấp key.</p></div>
+        <div class="card key-step"><div class="num">3</div><h3>Dán key</h3><p>Dán key vào app, bấm <b>Kích hoạt</b> — xong, bấm Bắt đầu là chạy.</p></div>
+      </div>
+      <div class="card contact" id="contact">
+        <p id="contact-text">Liên hệ admin để nhận key:</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================== FAQ -->
+  <section id="hoi-dap">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2 class="stroke">Hỏi đáp</h2>
+      </div>
+      <div class="faq">
+        <details class="card"><summary>Bot có làm mất ngọc hay vật phẩm không?</summary>
+          <div class="ans"><p>Không. Bot chỉ bấm nâng tường khi hộp xác nhận đúng giá bằng vàng hoặc dầu; thấy ngọc là hủy. Bot không bao giờ dùng Nhẫn tường, dầu đen hay mua bằng ngọc.</p></div></details>
+        <details class="card"><summary>Windows / phần mềm diệt virus báo có hại?</summary>
+          <div class="ans"><p>App đóng gói bằng Python và chưa có chữ ký số nên đôi khi bị báo nhầm. Chọn <b>Thông tin thêm → Vẫn chạy</b>, hoặc thêm thư mục AutoCoC vào danh sách ngoại lệ của phần mềm diệt virus.</p></div></details>
+        <details class="card"><summary>Bot bấm lệch hoặc không nhận ra màn hình?</summary>
+          <div class="ans"><p>Kiểm tra lại: giả lập để 1600 × 900 (DPI 240), game để tiếng Việt, không có cửa sổ chat hay thông báo che màn hình khi bắt đầu.</p></div></details>
+        <details class="card"><summary>Đang chơi bằng điện thoại thì bot báo mất kết nối?</summary>
+          <div class="ans"><p>Một tài khoản chỉ vào được một máy cùng lúc. Khi bạn tự chơi ở máy khác, hãy dừng bot trước.</p></div></details>
+        <details class="card"><summary>Nâng tường tự động hoạt động thế nào?</summary>
+          <div class="ans"><p>Bật ở trang <b>Làng &amp; Nâng cấp</b>. Bot đánh farm tới khi kho vàng hoặc dầu gần đầy (~90%), rồi nâng các đoạn tường rẻ nhất (nhiều đoạn một lần) cho tới khi còn mức "Giữ lại" bạn đặt, sau đó đánh tiếp.</p>
+          <p>Muốn dùng cả vàng lẫn dầu thì chọn <b>Dùng: Cả hai</b>. Đừng để "Giữ lại vàng" bằng 0 — bot cần vàng để tìm trận. Lần đầu nên để <b>Chạy thử</b> để xem bot làm gì mà chưa tốn tài nguyên.</p></div></details>
+        <details class="card"><summary>Cập nhật bản mới thế nào?</summary>
+          <div class="ans"><p>Tải lại ở trang này — nút tải luôn là bản mới nhất. Windows: giải nén đè lên thư mục cũ (giữ thư mục <b>userdata</b> để không mất cài đặt và key). Android: cài đè lên app cũ, không cần gỡ.</p></div></details>
+        <details class="card"><summary>Có cần root điện thoại không?</summary>
+          <div class="ans"><p>Không. App dùng Trợ năng để chạm và quyền quay màn hình để nhìn game, giống như bạn tự bấm.</p></div></details>
+      </div>
+      <div class="card changes" id="changes" hidden>
+        <h3 id="changes-title">Có gì mới</h3>
+        <ul id="changes-list"></ul>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p><b>AutoCoC</b> là công cụ của bên thứ ba, không liên kết với Supercell. Clash of Clans là thương hiệu của Supercell; hình ảnh game dùng theo Fan Content Policy của Supercell.</p>
+    <p>Dùng bot có thể trái với điều khoản của trò chơi — bạn tự cân nhắc khi sử dụng.</p>
+  </div>
+</footer>
+
+<script>
+/* ===== Cấu hình trang (tools/publish_web.py tự điền "repo"; thông tin liên hệ thì sửa trực tiếp ở đây) ===== */
+const SITE = {
+  repo: "NguyenHoang-pluto/autococ",            // "ten-tai-khoan/AutoCoC" — để trống: tự nhận khi trang chạy trên GitHub Pages
+  contact: {           // link liên hệ để khách nhận key; để trống thì ẩn nút đó
+    zalo: "",          // vd "https://zalo.me/0912345678"
+    facebook: "",      // vd "https://m.me/ten-trang"
+    telegram: "",      // vd "https://t.me/ten"
+  },
+};
+const FILES = { win: "AutoCoC-Windows.zip", apk: "AutoCoC.apk" };
+
+(function () {
+  "use strict";
+  // ---- repo: trang GitHub Pages "ten.github.io/AutoCoC" -> "ten/AutoCoC"
+  let repo = SITE.repo;
+  const host = location.hostname;
+  if (!repo && host.endsWith(".github.io")) {
+    const owner = host.split(".")[0];
+    const first = location.pathname.split("/").filter(Boolean)[0];
+    repo = owner + "/" + (first || host);
+  }
+  const local = location.protocol === "file:";
+  const link = (key) => repo ? `https://github.com/${repo}/releases/latest/download/${FILES[key]}`
+    : local ? `../release/${FILES[key]}` : "#cai-dat";
+  const winBtns = [document.getElementById("dl-win"), ...document.querySelectorAll('[data-dl="win"]')];
+  const apkBtns = [document.getElementById("dl-apk"), ...document.querySelectorAll('[data-dl="apk"]')];
+  winBtns.forEach((a) => { a.href = link("win"); });
+  apkBtns.forEach((a) => { a.href = link("apk"); });
+
+  // ---- tabs
+  const tabs = [document.getElementById("tab-win"), document.getElementById("tab-apk")];
+  function select(tab) {
+    tabs.forEach((t) => {
+      const on = t === tab;
+      t.setAttribute("aria-selected", on ? "true" : "false");
+      document.getElementById(t.getAttribute("aria-controls")).hidden = !on;
+    });
+  }
+  tabs.forEach((t) => t.addEventListener("click", () => select(t)));
+  // điện thoại Android: mở sẵn hướng dẫn Android và đưa nút Android lên trước
+  if (/Android/i.test(navigator.userAgent)) {
+    select(tabs[1]);
+    const cta = document.querySelector(".cta");
+    cta.insertBefore(document.getElementById("dl-apk"), cta.firstChild);
+  }
+
+  // ---- liên hệ
+  const contact = document.getElementById("contact");
+  const names = { zalo: "Zalo", facebook: "Facebook", telegram: "Telegram" };
+  let any = false;
+  Object.entries(SITE.contact).forEach(([k, url]) => {
+    if (!url) return;
+    any = true;
+    const a = document.createElement("a");
+    a.className = "btn small" + (k === "zalo" ? "" : " green");
+    a.href = url; a.target = "_blank"; a.rel = "noopener";
+    a.innerHTML = '<svg><use href="#i-chat"/></svg><span class="label">' + names[k] + "</span>";
+    contact.appendChild(a);
+  });
+  if (!any) document.getElementById("contact-text").textContent = "Liên hệ người đã giới thiệu AutoCoC cho bạn để nhận key.";
+
+  // ---- bản mới nhất: ngày cập nhật, dung lượng, ghi chú, tổng lượt tải (đọc từ GitHub Releases)
+  if (!repo) return;
+  const mb = (b) => (b / 1048576).toLocaleString("vi-VN", { maximumFractionDigits: b < 10485760 ? 1 : 0 }) + " MB";
+  fetch(`https://api.github.com/repos/${repo}/releases?per_page=100`, { headers: { Accept: "application/vnd.github+json" } })
+    .then((r) => (r.ok ? r.json() : Promise.reject(r.status)))
+    .then((list) => {
+      const rels = list.filter((r) => !r.draft && !r.prerelease)
+        .sort((a, b) => new Date(b.published_at) - new Date(a.published_at));
+      if (!rels.length) return;
+      const rel = rels[0];
+      const date = new Date(rel.published_at).toLocaleDateString("vi-VN", { day: "2-digit", month: "2-digit", year: "numeric" });
+      document.getElementById("ver").innerHTML = "Bản mới nhất · cập nhật <b></b>";
+      document.querySelector("#ver b").textContent = date;
+      (rel.assets || []).forEach((a) => {
+        if (a.name === FILES.win) document.getElementById("dl-win-sub").textContent = "Giả lập LDPlayer 9 · " + mb(a.size);
+        if (a.name === FILES.apk) document.getElementById("dl-apk-sub").textContent = "APK · " + mb(a.size) + " · không cần root";
+      });
+      let downloads = 0;
+      rels.forEach((r) => (r.assets || []).forEach((a) => { downloads += a.download_count || 0; }));
+      if (downloads >= 50) {
+        const s = document.createElement("span");
+        s.innerHTML = "<b></b> lượt tải";
+        s.querySelector("b").textContent = downloads.toLocaleString("vi-VN");
+        document.querySelector(".meta").appendChild(s);
+      }
+      const lines = (rel.body || "").split(/\r?\n/).map((l) => l.replace(/^\s*[-*•]\s*/, "").trim()).filter(Boolean);
+      if (lines.length) {
+        const ul = document.getElementById("changes-list");
+        lines.slice(0, 12).forEach((l) => { const li = document.createElement("li"); li.textContent = l; ul.appendChild(li); });
+        document.getElementById("changes-title").textContent = "Có gì mới — bản " + date;
+        document.getElementById("changes").hidden = false;
+      }
+    })
+    .catch(() => {});
+})();
+</script>
+</body>
+</html>
