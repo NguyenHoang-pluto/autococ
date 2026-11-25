@@ -1,32 +1,30 @@
 {
   "schema": 1,
-  "updated_at": "2026-11-25T13:25:15Z",
-  "tag": "v2026.11.25-202421",
+  "updated_at": "2026-11-25T15:21:41Z",
+  "tag": "v2026.11.25-222034",
   "windows": {
-    "version": "0.1.34",
+    "version": "0.1.35",
     "min_version": "",
-    "url": "https://github.com/NguyenHoang-pluto/autococ/releases/download/v2026.11.25-202421/AutoCoC-Windows.zip",
-    "sha256": "267d0d25786fc13da6a52c59b8deb8e5bd847c1c0423edf89acb32549bb848e9",
-    "size": 67943500,
+    "url": "https://github.com/NguyenHoang-pluto/autococ/releases/download/v2026.11.25-222034/AutoCoC-Windows.zip",
+    "sha256": "aab7dfaaf40c428bab7da004c9fc71a22cf77e6a1826f6542ca8589a0215c8a7",
+    "size": 83802006,
     "notes": [
-      "Giao diện mới V3 Royal Twilight Glass đồng bộ cho cả Windows (0.1.34) và Android (1.0.39): nền thành trì Clash of Clans hoàng hôn, thẻ kính mờ, tối gọn menu & thu gọn tùy chọn nâng cao (giữ nguyên 100% tính năng)",
-      "Thiết kế lại toàn diện trang Trò chơi Hội đồng nhất 4 tab (PC) / 3 tab (Android), thay toàn bộ icon bằng ảnh 3D thật trong Clash of Clans (Xe Lữ Hành, Sách Toàn Năng, Bình Siêu Quân, Cỗ Máy Chiến Đấu, Tháp Phòng Không, Khí Cầu Hỏa Tiễn…)",
-      "Trực quan hóa Làng đêm, Kinh đô Hội, Nâng tường/công trình và Đa tài khoản bằng thẻ ảnh game thật, tách tab gọn gàng",
-      "Sửa lỗi thả quân Làng chính khi mây chuyển cảnh chưa tan và chờ số Vàng / Dầu / Dầu đen màn hình kết quả đếm xong mới đọc"
+      "Giao diện Giáng sinh (Clashmas) mặc định mới trên cả Windows (0.1.35) và Android (1.0.40) bằng ảnh Clash of Clans chính hãng (nền Winter 2022, cây thông Noel, thẻ phủ tuyết, đèn lễ hội và tuyết rơi) — chuyển về giao diện thường bất cứ lúc nào trong Giao diện & Chủ đề.",
+      "Thêm nhạc nền Giáng sinh mặc định phát lặp offline kèm nút loa bật/tắt ngay trên thanh tiêu đề (bấm 1 chạm để tắt/bật và tự lưu; cuộn chuột/chuột phải trên PC hoặc nhấn giữ trên Android để chỉnh âm lượng).",
+      "Bản PC Windows: đặt mặc định kiểu đánh Làng chính là Nhắm tài nguyên và nâng cấp trang Tổng quan theo dõi trực tiếp tài nguyên Đa giả lập."
     ]
   },
   "android": {
-    "version": "1.0.39",
-    "version_code": 40,
+    "version": "1.0.40",
+    "version_code": 41,
     "min_version_code": 0,
-    "url": "https://github.com/NguyenHoang-pluto/autococ/releases/download/v2026.11.25-202421/AutoCoC.apk",
-    "sha256": "45043b862f55b8857a6355cffc326f47b2048625cbfe1f1d7e9ab18fc8ed6275",
-    "size": 48665721,
+    "url": "https://github.com/NguyenHoang-pluto/autococ/releases/download/v2026.11.25-222034/AutoCoC.apk",
+    "sha256": "aeff4a5467326f790925e4487edf2e9a5efd34773bcae39bcd2eebc24d62fc30",
+    "size": 64792431,
     "notes": [
-      "Giao diện mới V3 Royal Twilight Glass đồng bộ cho cả Windows (0.1.34) và Android (1.0.39): nền thành trì Clash of Clans hoàng hôn, thẻ kính mờ, tối gọn menu & thu gọn tùy chọn nâng cao (giữ nguyên 100% tính năng)",
-      "Thiết kế lại toàn diện trang Trò chơi Hội đồng nhất 4 tab (PC) / 3 tab (Android), thay toàn bộ icon bằng ảnh 3D thật trong Clash of Clans (Xe Lữ Hành, Sách Toàn Năng, Bình Siêu Quân, Cỗ Máy Chiến Đấu, Tháp Phòng Không, Khí Cầu Hỏa Tiễn…)",
-      "Trực quan hóa Làng đêm, Kinh đô Hội, Nâng tường/công trình và Đa tài khoản bằng thẻ ảnh game thật, tách tab gọn gàng",
-      "Sửa lỗi thả quân Làng chính khi mây chuyển cảnh chưa tan và chờ số Vàng / Dầu / Dầu đen màn hình kết quả đếm xong mới đọc"
+      "Giao diện Giáng sinh (Clashmas) mặc định mới trên cả Windows (0.1.35) và Android (1.0.40) bằng ảnh Clash of Clans chính hãng (nền Winter 2022, cây thông Noel, thẻ phủ tuyết, đèn lễ hội và tuyết rơi) — chuyển về giao diện thường bất cứ lúc nào trong Giao diện & Chủ đề.",
+      "Thêm nhạc nền Giáng sinh mặc định phát lặp offline kèm nút loa bật/tắt ngay trên thanh tiêu đề (bấm 1 chạm để tắt/bật và tự lưu; cuộn chuột/chuột phải trên PC hoặc nhấn giữ trên Android để chỉnh âm lượng).",
+      "Bản PC Windows: đặt mặc định kiểu đánh Làng chính là Nhắm tài nguyên và nâng cấp trang Tổng quan theo dõi trực tiếp tài nguyên Đa giả lập."
     ]
   }
 }
