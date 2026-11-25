@@ -1,32 +1,32 @@
 {
   "schema": 1,
-  "updated_at": "2026-11-25T03:50:33Z",
-  "tag": "v2026.11.25-104933",
+  "updated_at": "2026-11-25T13:25:15Z",
+  "tag": "v2026.11.25-202421",
   "windows": {
-    "version": "0.1.32",
+    "version": "0.1.34",
     "min_version": "",
-    "url": "https://github.com/NguyenHoang-pluto/autococ/releases/download/v2026.11.25-104933/AutoCoC-Windows.zip",
-    "sha256": "b24cc827c3b2d14cb22d0f4ba5a8031acece6c557952375b2f6230f6ba8ff2fa",
-    "size": 67411501,
+    "url": "https://github.com/NguyenHoang-pluto/autococ/releases/download/v2026.11.25-202421/AutoCoC-Windows.zip",
+    "sha256": "267d0d25786fc13da6a52c59b8deb8e5bd847c1c0423edf89acb32549bb848e9",
+    "size": 67943500,
     "notes": [
-      "Sửa triệt để lỗi SSL CERTIFICATE_VERIFY_FAILED khi tự động cập nhật trên Windows (tích hợp sẵn bộ chứng chỉ gốc certifi + dự phòng Windows SChannel)",
-      "Sửa tự mở khóa Siêu quân 25.000 Dầu đen trên mọi cảnh quan & kẹp đúng số quân / bình phép rồi tự khôi phục đội hình ban đầu",
-      "Bổ sung chế độ Trò chơi Hội cho Đa giả lập (PC) kèm chống xung đột cùng Hội",
-      "Đổi sang Trợ lý AI (AutoCoC), bỏ API key Claude và ổn định nút Tắt Trợ năng Android"
+      "Giao diện mới V3 Royal Twilight Glass đồng bộ cho cả Windows (0.1.34) và Android (1.0.39): nền thành trì Clash of Clans hoàng hôn, thẻ kính mờ, tối gọn menu & thu gọn tùy chọn nâng cao (giữ nguyên 100% tính năng)",
+      "Thiết kế lại toàn diện trang Trò chơi Hội đồng nhất 4 tab (PC) / 3 tab (Android), thay toàn bộ icon bằng ảnh 3D thật trong Clash of Clans (Xe Lữ Hành, Sách Toàn Năng, Bình Siêu Quân, Cỗ Máy Chiến Đấu, Tháp Phòng Không, Khí Cầu Hỏa Tiễn…)",
+      "Trực quan hóa Làng đêm, Kinh đô Hội, Nâng tường/công trình và Đa tài khoản bằng thẻ ảnh game thật, tách tab gọn gàng",
+      "Sửa lỗi thả quân Làng chính khi mây chuyển cảnh chưa tan và chờ số Vàng / Dầu / Dầu đen màn hình kết quả đếm xong mới đọc"
     ]
   },
   "android": {
-    "version": "1.0.36",
-    "version_code": 37,
+    "version": "1.0.39",
+    "version_code": 40,
     "min_version_code": 0,
-    "url": "https://github.com/NguyenHoang-pluto/autococ/releases/download/v2026.11.25-104933/AutoCoC.apk",
-    "sha256": "a874c08f91a52fa0b3bba04e172a9a86ddd18d232d3ec3b505d24bfb19713bd1",
-    "size": 46325758,
+    "url": "https://github.com/NguyenHoang-pluto/autococ/releases/download/v2026.11.25-202421/AutoCoC.apk",
+    "sha256": "45043b862f55b8857a6355cffc326f47b2048625cbfe1f1d7e9ab18fc8ed6275",
+    "size": 48665721,
     "notes": [
-      "Sửa triệt để lỗi SSL CERTIFICATE_VERIFY_FAILED khi tự động cập nhật trên Windows (tích hợp sẵn bộ chứng chỉ gốc certifi + dự phòng Windows SChannel)",
-      "Sửa tự mở khóa Siêu quân 25.000 Dầu đen trên mọi cảnh quan & kẹp đúng số quân / bình phép rồi tự khôi phục đội hình ban đầu",
-      "Bổ sung chế độ Trò chơi Hội cho Đa giả lập (PC) kèm chống xung đột cùng Hội",
-      "Đổi sang Trợ lý AI (AutoCoC), bỏ API key Claude và ổn định nút Tắt Trợ năng Android"
+      "Giao diện mới V3 Royal Twilight Glass đồng bộ cho cả Windows (0.1.34) và Android (1.0.39): nền thành trì Clash of Clans hoàng hôn, thẻ kính mờ, tối gọn menu & thu gọn tùy chọn nâng cao (giữ nguyên 100% tính năng)",
+      "Thiết kế lại toàn diện trang Trò chơi Hội đồng nhất 4 tab (PC) / 3 tab (Android), thay toàn bộ icon bằng ảnh 3D thật trong Clash of Clans (Xe Lữ Hành, Sách Toàn Năng, Bình Siêu Quân, Cỗ Máy Chiến Đấu, Tháp Phòng Không, Khí Cầu Hỏa Tiễn…)",
+      "Trực quan hóa Làng đêm, Kinh đô Hội, Nâng tường/công trình và Đa tài khoản bằng thẻ ảnh game thật, tách tab gọn gàng",
+      "Sửa lỗi thả quân Làng chính khi mây chuyển cảnh chưa tan và chờ số Vàng / Dầu / Dầu đen màn hình kết quả đếm xong mới đọc"
     ]
   }
 }
