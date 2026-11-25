@@ -1,0 +1,32 @@
+{
+  "schema": 1,
+  "updated_at": "2026-11-25T03:34:36Z",
+  "tag": "v2026.11.25-103344",
+  "windows": {
+    "version": "0.1.31",
+    "min_version": "",
+    "url": "https://github.com/NguyenHoang-pluto/autococ/releases/download/v2026.11.25-103344/AutoCoC-Windows.zip",
+    "sha256": "641fb597a31cabab6a9a8ba9ed32b47ae5214f4fe6571368ab7028a2216a67b5",
+    "size": 67284506,
+    "notes": [
+      "Sửa triệt để tự mở khóa Siêu quân 25.000 Dầu đen (mọi cảnh quan, tìm trực quan không nhảy hàng, tuyệt đối không bấm Ngọc)",
+      "Kẹp tạm đúng số quân & bình phép theo yêu cầu thẻ Trò chơi Hội rồi tự khôi phục nguyên đội hình & bình phép ban đầu",
+      "Bổ sung chế độ Trò chơi Hội cho Đa giả lập (PC) kèm điều phối chống xung đột cùng Hội",
+      "Đổi sang Trợ lý AI (AutoCoC), bỏ API key Claude và ổn định nút Tắt Trợ năng trên Android"
+    ]
+  },
+  "android": {
+    "version": "1.0.36",
+    "version_code": 37,
+    "min_version_code": 0,
+    "url": "https://github.com/NguyenHoang-pluto/autococ/releases/download/v2026.11.25-103344/AutoCoC.apk",
+    "sha256": "a874c08f91a52fa0b3bba04e172a9a86ddd18d232d3ec3b505d24bfb19713bd1",
+    "size": 46325758,
+    "notes": [
+      "Sửa triệt để tự mở khóa Siêu quân 25.000 Dầu đen (mọi cảnh quan, tìm trực quan không nhảy hàng, tuyệt đối không bấm Ngọc)",
+      "Kẹp tạm đúng số quân & bình phép theo yêu cầu thẻ Trò chơi Hội rồi tự khôi phục nguyên đội hình & bình phép ban đầu",
+      "Bổ sung chế độ Trò chơi Hội cho Đa giả lập (PC) kèm điều phối chống xung đột cùng Hội",
+      "Đổi sang Trợ lý AI (AutoCoC), bỏ API key Claude và ổn định nút Tắt Trợ năng trên Android"
+    ]
+  }
+}
