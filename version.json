@@ -1,30 +1,34 @@
 {
   "schema": 1,
-  "updated_at": "2026-11-25T15:21:41Z",
-  "tag": "v2026.11.25-222034",
+  "updated_at": "2026-11-26T10:50:41Z",
+  "tag": "v2026.11.26-174925",
   "windows": {
-    "version": "0.1.35",
+    "version": "0.1.36",
     "min_version": "",
-    "url": "https://github.com/NguyenHoang-pluto/autococ/releases/download/v2026.11.25-222034/AutoCoC-Windows.zip",
-    "sha256": "aab7dfaaf40c428bab7da004c9fc71a22cf77e6a1826f6542ca8589a0215c8a7",
-    "size": 83802006,
+    "url": "https://github.com/NguyenHoang-pluto/autococ/releases/download/v2026.11.26-174925/AutoCoC-Windows.zip",
+    "sha256": "a499b21ddd1bdc25340e2805bb890a99c1ec17e9c5b6280887828a97fc23021f",
+    "size": 83859517,
     "notes": [
-      "Giao diện Giáng sinh (Clashmas) mặc định mới trên cả Windows (0.1.35) và Android (1.0.40) bằng ảnh Clash of Clans chính hãng (nền Winter 2022, cây thông Noel, thẻ phủ tuyết, đèn lễ hội và tuyết rơi) — chuyển về giao diện thường bất cứ lúc nào trong Giao diện & Chủ đề.",
-      "Thêm nhạc nền Giáng sinh mặc định phát lặp offline kèm nút loa bật/tắt ngay trên thanh tiêu đề (bấm 1 chạm để tắt/bật và tự lưu; cuộn chuột/chuột phải trên PC hoặc nhấn giữ trên Android để chỉnh âm lượng).",
-      "Bản PC Windows: đặt mặc định kiểu đánh Làng chính là Nhắm tài nguyên và nâng cấp trang Tổng quan theo dõi trực tiếp tài nguyên Đa giả lập."
+      "Sửa nâng cấp công trình Làng chính trên mọi tỉ lệ màn hình (1:1..2,6:1, tablet 16:10, 720p): khớp tiêu đề, đọc thời gian, huy hiệu cấp, dung sai xác minh giá 1% & tự thử chạm lại (tách biệt hoàn toàn với nâng tường, không dùng Ngọc, nâng Nhà chính cuối)",
+      "Làng đêm: thêm bật kỹ năng Anh hùng sau khi thanh nội tại đầy mức 1 + N giây (mặc định 2,0 giây, tùy chỉnh 0-15 giây) trên mọi tỉ lệ PC & Android",
+      "Làng đêm: thêm chức năng Nâng tường tự động (Vàng / Dầu tím Làng đêm / Cả hai, tùy chọn Chỉ nâng khi kho gần đầy ~90%, giữ lại tài nguyên, không dùng Ngọc hay Nhẫn tường)",
+      "Sửa lỗi không bật được kỹ năng ở một số Anh hùng Làng chính trên mọi tỉ lệ PC & Android (giữ chốt chống tự hủy Cỗ máy dấu !)",
+      "Sửa tự đổi tài khoản thông minh (đầy kho Làng chính, đủ thưởng sao Làng đêm, xong Trò chơi Hội, hết lượt Đột kích Kinh đô) và thêm tỉ lệ 2880x1800 / 1440x900 cùng sửa đập rương sự kiện"
     ]
   },
   "android": {
-    "version": "1.0.40",
-    "version_code": 41,
+    "version": "1.0.41",
+    "version_code": 42,
     "min_version_code": 0,
-    "url": "https://github.com/NguyenHoang-pluto/autococ/releases/download/v2026.11.25-222034/AutoCoC.apk",
-    "sha256": "aeff4a5467326f790925e4487edf2e9a5efd34773bcae39bcd2eebc24d62fc30",
-    "size": 64792431,
+    "url": "https://github.com/NguyenHoang-pluto/autococ/releases/download/v2026.11.26-174925/AutoCoC.apk",
+    "sha256": "2084119f25288a6a98690961baa6cb33a4bfe0a0b052256c3e13fcef8167b496",
+    "size": 64808815,
     "notes": [
-      "Giao diện Giáng sinh (Clashmas) mặc định mới trên cả Windows (0.1.35) và Android (1.0.40) bằng ảnh Clash of Clans chính hãng (nền Winter 2022, cây thông Noel, thẻ phủ tuyết, đèn lễ hội và tuyết rơi) — chuyển về giao diện thường bất cứ lúc nào trong Giao diện & Chủ đề.",
-      "Thêm nhạc nền Giáng sinh mặc định phát lặp offline kèm nút loa bật/tắt ngay trên thanh tiêu đề (bấm 1 chạm để tắt/bật và tự lưu; cuộn chuột/chuột phải trên PC hoặc nhấn giữ trên Android để chỉnh âm lượng).",
-      "Bản PC Windows: đặt mặc định kiểu đánh Làng chính là Nhắm tài nguyên và nâng cấp trang Tổng quan theo dõi trực tiếp tài nguyên Đa giả lập."
+      "Sửa nâng cấp công trình Làng chính trên mọi tỉ lệ màn hình (1:1..2,6:1, tablet 16:10, 720p): khớp tiêu đề, đọc thời gian, huy hiệu cấp, dung sai xác minh giá 1% & tự thử chạm lại (tách biệt hoàn toàn với nâng tường, không dùng Ngọc, nâng Nhà chính cuối)",
+      "Làng đêm: thêm bật kỹ năng Anh hùng sau khi thanh nội tại đầy mức 1 + N giây (mặc định 2,0 giây, tùy chỉnh 0-15 giây) trên mọi tỉ lệ PC & Android",
+      "Làng đêm: thêm chức năng Nâng tường tự động (Vàng / Dầu tím Làng đêm / Cả hai, tùy chọn Chỉ nâng khi kho gần đầy ~90%, giữ lại tài nguyên, không dùng Ngọc hay Nhẫn tường)",
+      "Sửa lỗi không bật được kỹ năng ở một số Anh hùng Làng chính trên mọi tỉ lệ PC & Android (giữ chốt chống tự hủy Cỗ máy dấu !)",
+      "Sửa tự đổi tài khoản thông minh (đầy kho Làng chính, đủ thưởng sao Làng đêm, xong Trò chơi Hội, hết lượt Đột kích Kinh đô) và thêm tỉ lệ 2880x1800 / 1440x900 cùng sửa đập rương sự kiện"
     ]
   }
 }
