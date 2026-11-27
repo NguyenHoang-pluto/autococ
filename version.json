@@ -1,30 +1,31 @@
 {
   "schema": 1,
-  "updated_at": "2026-11-27T01:08:41Z",
-  "tag": "v2026.11.27-080726",
+  "updated_at": "2026-11-27T13:34:36Z",
+  "tag": "security-lock",
+  "blocked": true,
+  "block_message": "Phiên bản cũ đã bị khóa khẩn cấp để nâng cấp bảo mật toàn diện. Vui lòng cập nhật bản mới và liên hệ admin để nhận key mới.",
+  "revoked_ids": [],
   "windows": {
-    "version": "0.1.38",
-    "min_version": "",
-    "url": "https://github.com/NguyenHoang-pluto/autococ/releases/download/v2026.11.27-080726/AutoCoC-Windows.zip",
-    "sha256": "434b7f1ea9b2d1e1c87d4d45b727531c43d7433adfeea6de93650f65001665c2",
-    "size": 83914471,
+    "version": "99.0.0",
+    "min_version": "99.0.0",
+    "url": "https://github.com/NguyenHoang-pluto/autococ/releases/download/security-lock/AutoCoC-Windows-locked.zip",
+    "sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+    "size": 0,
     "notes": [
-      "PC Windows: thêm giao diện trang Đánh 3 Sao (3 chế độ Đánh Rank · Đánh War · Hội chiến 7 ngày CWL, dải tiến độ 7 ngày, bản đồ Radar chiến thuật & quy trình 8 bước — bản xem trước giao diện).",
-      "PC & Android: tự động cộng Phần thưởng thêm khi thắng (100% THƯỞNG khi thắng >= 1 sao) vào tổng Vàng / Dầu / Dầu đen thu được, Trận gần đây, tốc độ / giờ và ghi rõ trong Nhật ký trên mọi tỉ lệ màn hình.",
-      "Android & PC: sửa triệt để lỗi “Thao tác Trợ năng bị hệ thống hủy” (tự thử lại khi hệ thống hủy cử chỉ, làm an toàn thu nhỏ 2 ngón không dừng bot khi ROM chặn đa điểm) và hoàn thiện hỗ trợ tỉ lệ màn hình 3168×1440 (1980×900) trên mọi chức năng + sửa cắt chữ thanh tiêu đề Android."
+      "Phiên bản cũ đã bị khóa khẩn cấp để nâng cấp bảo mật toàn diện.",
+      "Hệ thống đang phát hành bản mới — vui lòng chờ thông báo và liên hệ admin để nhận bản mới + key mới."
     ]
   },
   "android": {
-    "version": "1.0.43",
-    "version_code": 44,
-    "min_version_code": 0,
-    "url": "https://github.com/NguyenHoang-pluto/autococ/releases/download/v2026.11.27-080726/AutoCoC.apk",
-    "sha256": "3ae51e2c625a8fa5b8fa6a691c651e21f38dddcc88a578bf2795d1fd839c84d4",
-    "size": 64810151,
+    "version": "99.0.0",
+    "version_code": 99999,
+    "min_version_code": 99999,
+    "url": "https://github.com/NguyenHoang-pluto/autococ/releases/download/security-lock/AutoCoC-locked.apk",
+    "sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+    "size": 0,
     "notes": [
-      "PC Windows: thêm giao diện trang Đánh 3 Sao (3 chế độ Đánh Rank · Đánh War · Hội chiến 7 ngày CWL, dải tiến độ 7 ngày, bản đồ Radar chiến thuật & quy trình 8 bước — bản xem trước giao diện).",
-      "PC & Android: tự động cộng Phần thưởng thêm khi thắng (100% THƯỞNG khi thắng >= 1 sao) vào tổng Vàng / Dầu / Dầu đen thu được, Trận gần đây, tốc độ / giờ và ghi rõ trong Nhật ký trên mọi tỉ lệ màn hình.",
-      "Android & PC: sửa triệt để lỗi “Thao tác Trợ năng bị hệ thống hủy” (tự thử lại khi hệ thống hủy cử chỉ, làm an toàn thu nhỏ 2 ngón không dừng bot khi ROM chặn đa điểm) và hoàn thiện hỗ trợ tỉ lệ màn hình 3168×1440 (1980×900) trên mọi chức năng + sửa cắt chữ thanh tiêu đề Android."
+      "Phiên bản cũ đã bị khóa khẩn cấp để nâng cấp bảo mật toàn diện.",
+      "Hệ thống đang phát hành bản mới — vui lòng chờ thông báo và liên hệ admin để nhận bản mới + key mới."
     ]
   }
 }
