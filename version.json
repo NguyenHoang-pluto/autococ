@@ -1,33 +1,31 @@
 {
   "schema": 1,
-  "updated_at": "2026-11-27T16:09:45Z",
-  "tag": "v2026.11.27-230832",
+  "updated_at": "2026-11-27T16:31:16Z",
+  "tag": "v2026.11.27-233009",
   "blocked": false,
   "block_message": "",
   "revoked_ids": [],
   "windows": {
-    "version": "0.1.42",
+    "version": "0.1.43",
     "min_version": "0.1.42",
-    "url": "https://github.com/NguyenHoang-pluto/autococ/releases/download/v2026.11.27-230832/NHClash-Windows.zip",
-    "sha256": "cd81102273eb84c9801dd568b82e26e0d2ab51c9a88618fb51a8a0280607f0a6",
-    "size": 84007834,
+    "url": "https://github.com/NguyenHoang-pluto/autococ/releases/download/v2026.11.27-233009/NHClash-Windows.zip",
+    "sha256": "d3e9f9efe520bc60bc7148b107fd6a3d2f740f50739a063eefb74a4413477d95",
+    "size": 84156400,
     "notes": [
-      "Đổi tên ứng dụng sang NHClash (Windows và Android)",
-      "Cải thiện độ ổn định và tối ưu hiệu năng"
+      "Cập nhật logo / biểu tượng ứng dụng NHClash mới"
     ]
   },
   "android": {
-    "version": "1.0.47",
-    "version_code": 48,
+    "version": "1.0.48",
+    "version_code": 49,
     "min_version_code": 48,
-    "url": "https://github.com/NguyenHoang-pluto/autococ/releases/download/v2026.11.27-230832/NHClash.apk",
-    "sha256": "277a5c700ac2251bcf808f45e5669996ac3da324c132d91131de123ac45bed51",
-    "size": 64807827,
+    "url": "https://github.com/NguyenHoang-pluto/autococ/releases/download/v2026.11.27-233009/NHClash.apk",
+    "sha256": "a014dec126758e914228ba252e2b613c1b26ab4efb5e26b94fc7a492afde673a",
+    "size": 64926407,
     "notes": [
-      "Đổi tên ứng dụng sang NHClash (Windows và Android)",
-      "Cải thiện độ ổn định và tối ưu hiệu năng"
+      "Cập nhật logo / biểu tượng ứng dụng NHClash mới"
     ]
   },
   "policy_issued_day": 20784,
-  "policy_sig": "7cc09687589573b0fe6c42c320da095be518fa5605810811e00c3389eb19a5e7af4437ee0425077decae14170c06ea415796bb496015b36e2e27dbea3843c961"
+  "policy_sig": "5a7b3ac4104de1c62a25aca899d63ced63d2a3ec5659c326f8c770c3977ff1d1e456de4ddf7188e80ff15716055928b302c281dcf37f7f6b617fb54ced57ef25"
 }
