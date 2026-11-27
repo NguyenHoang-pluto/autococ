@@ -1,35 +1,33 @@
 {
   "schema": 1,
-  "updated_at": "2026-11-27T15:41:34Z",
-  "tag": "v2026.11.27-224016",
+  "updated_at": "2026-11-27T16:09:45Z",
+  "tag": "v2026.11.27-230832",
   "blocked": false,
   "block_message": "",
   "revoked_ids": [],
   "windows": {
-    "version": "0.1.41",
-    "min_version": "0.1.41",
-    "url": "https://github.com/NguyenHoang-pluto/autococ/releases/download/v2026.11.27-224016/NHClash-Windows.zip",
-    "sha256": "eea31d3ea2e6f1799929f5db7e935089fe894afdb568c6d041568cd16888295e",
-    "size": 84015027,
+    "version": "0.1.42",
+    "min_version": "0.1.42",
+    "url": "https://github.com/NguyenHoang-pluto/autococ/releases/download/v2026.11.27-230832/NHClash-Windows.zip",
+    "sha256": "cd81102273eb84c9801dd568b82e26e0d2ab51c9a88618fb51a8a0280607f0a6",
+    "size": 84007834,
     "notes": [
-      "Đổi tên sang NHClash (0 server, 0 thu thập IP hay dữ liệu cá nhân)",
-      "Chính sách version.json ký chữ ký số ECDSA P-256 (chống giả mạo hosts, kiểm tra định kỳ 3 phút)",
-      "Khóa cứng hoàn toàn cập nhật bắt buộc — bấm X / Hủy / Back thoát hẳn hoặc khóa toàn màn hình"
+      "Đổi tên ứng dụng sang NHClash (Windows và Android)",
+      "Cải thiện độ ổn định và tối ưu hiệu năng"
     ]
   },
   "android": {
-    "version": "1.0.46",
-    "version_code": 47,
-    "min_version_code": 47,
-    "url": "https://github.com/NguyenHoang-pluto/autococ/releases/download/v2026.11.27-224016/NHClash.apk",
-    "sha256": "947fd9244acce8256b0bafe39af58d1b5b685c87eb3fcd9e195d7541b9f4714e",
-    "size": 64807823,
+    "version": "1.0.47",
+    "version_code": 48,
+    "min_version_code": 48,
+    "url": "https://github.com/NguyenHoang-pluto/autococ/releases/download/v2026.11.27-230832/NHClash.apk",
+    "sha256": "277a5c700ac2251bcf808f45e5669996ac3da324c132d91131de123ac45bed51",
+    "size": 64807827,
     "notes": [
-      "Đổi tên sang NHClash (0 server, 0 thu thập IP hay dữ liệu cá nhân)",
-      "Chính sách version.json ký chữ ký số ECDSA P-256 (chống giả mạo hosts, kiểm tra định kỳ 3 phút)",
-      "Khóa cứng hoàn toàn cập nhật bắt buộc — bấm X / Hủy / Back thoát hẳn hoặc khóa toàn màn hình"
+      "Đổi tên ứng dụng sang NHClash (Windows và Android)",
+      "Cải thiện độ ổn định và tối ưu hiệu năng"
     ]
   },
   "policy_issued_day": 20784,
-  "policy_sig": "70740f3c0f3f125ba95c9fd3c0fd8b6a617ec7eac1dd25d865113180bf4de452b87907ed52d25da108bc1da00fb9836fe7cb96c134bc0471c012030e614028e0"
+  "policy_sig": "7cc09687589573b0fe6c42c320da095be518fa5605810811e00c3389eb19a5e7af4437ee0425077decae14170c06ea415796bb496015b36e2e27dbea3843c961"
 }
