@@ -1,33 +1,35 @@
 {
   "schema": 1,
-  "updated_at": "2026-11-27T15:13:48Z",
-  "tag": "v2026.11.27-221241",
+  "updated_at": "2026-11-27T15:41:34Z",
+  "tag": "v2026.11.27-224016",
   "blocked": false,
   "block_message": "",
   "revoked_ids": [],
   "windows": {
-    "version": "0.1.40",
-    "min_version": "0.1.40",
-    "url": "https://github.com/NguyenHoang-pluto/autococ/releases/download/v2026.11.27-221241/NHClash-Windows.zip",
-    "sha256": "370ce9d4e6e1f0565c42a1b8744ce0b8f5fb52d7eb7f1a0ad049502b98189263",
-    "size": 84014243,
+    "version": "0.1.41",
+    "min_version": "0.1.41",
+    "url": "https://github.com/NguyenHoang-pluto/autococ/releases/download/v2026.11.27-224016/NHClash-Windows.zip",
+    "sha256": "eea31d3ea2e6f1799929f5db7e935089fe894afdb568c6d041568cd16888295e",
+    "size": 84015027,
     "notes": [
-      "Đổi tên thương hiệu sang NHClash (NHClash.exe / NHClash.apk)",
-      "Nâng cấp máy chủ bản quyền Online v3 (Cloudflare + chữ ký ECDSA P-256 theo phiên, kiểm tra 3 phút, khóa key & đá phiên dùng chung tức thì)",
-      "Khóa chặt cập nhật bắt buộc — chặn hoàn toàn việc bấm Bắt đầu nhanh vượt bản cũ"
+      "Đổi tên sang NHClash (0 server, 0 thu thập IP hay dữ liệu cá nhân)",
+      "Chính sách version.json ký chữ ký số ECDSA P-256 (chống giả mạo hosts, kiểm tra định kỳ 3 phút)",
+      "Khóa cứng hoàn toàn cập nhật bắt buộc — bấm X / Hủy / Back thoát hẳn hoặc khóa toàn màn hình"
     ]
   },
   "android": {
-    "version": "1.0.45",
-    "version_code": 46,
-    "min_version_code": 46,
-    "url": "https://github.com/NguyenHoang-pluto/autococ/releases/download/v2026.11.27-221241/NHClash.apk",
-    "sha256": "c591bcc0d31a30ab718dcc139ea980ec6e205886aec22c482cd0169a7c709ea4",
+    "version": "1.0.46",
+    "version_code": 47,
+    "min_version_code": 47,
+    "url": "https://github.com/NguyenHoang-pluto/autococ/releases/download/v2026.11.27-224016/NHClash.apk",
+    "sha256": "947fd9244acce8256b0bafe39af58d1b5b685c87eb3fcd9e195d7541b9f4714e",
     "size": 64807823,
     "notes": [
-      "Đổi tên thương hiệu sang NHClash (NHClash.exe / NHClash.apk)",
-      "Nâng cấp máy chủ bản quyền Online v3 (Cloudflare + chữ ký ECDSA P-256 theo phiên, kiểm tra 3 phút, khóa key & đá phiên dùng chung tức thì)",
-      "Khóa chặt cập nhật bắt buộc — chặn hoàn toàn việc bấm Bắt đầu nhanh vượt bản cũ"
+      "Đổi tên sang NHClash (0 server, 0 thu thập IP hay dữ liệu cá nhân)",
+      "Chính sách version.json ký chữ ký số ECDSA P-256 (chống giả mạo hosts, kiểm tra định kỳ 3 phút)",
+      "Khóa cứng hoàn toàn cập nhật bắt buộc — bấm X / Hủy / Back thoát hẳn hoặc khóa toàn màn hình"
     ]
-  }
+  },
+  "policy_issued_day": 20784,
+  "policy_sig": "70740f3c0f3f125ba95c9fd3c0fd8b6a617ec7eac1dd25d865113180bf4de452b87907ed52d25da108bc1da00fb9836fe7cb96c134bc0471c012030e614028e0"
 }
