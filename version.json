@@ -1,32 +1,30 @@
 {
   "schema": 1,
-  "updated_at": "2026-11-26T15:58:08Z",
-  "tag": "v2026.11.26-225652",
+  "updated_at": "2026-11-27T01:08:41Z",
+  "tag": "v2026.11.27-080726",
   "windows": {
-    "version": "0.1.37",
+    "version": "0.1.38",
     "min_version": "",
-    "url": "https://github.com/NguyenHoang-pluto/autococ/releases/download/v2026.11.26-225652/AutoCoC-Windows.zip",
-    "sha256": "0ec95e5963d8f06dddfab2f600f093460ffc33d8aaabb35df65e78919ddb43f4",
-    "size": 83880402,
+    "url": "https://github.com/NguyenHoang-pluto/autococ/releases/download/v2026.11.27-080726/AutoCoC-Windows.zip",
+    "sha256": "434b7f1ea9b2d1e1c87d4d45b727531c43d7433adfeea6de93650f65001665c2",
+    "size": 83914471,
     "notes": [
-      "Sửa lỗi nâng tường & nâng công trình Làng chính khi bảng sự kiện Hành trình Tướng (Hero Journey / Claim!) che ô thợ xây góc dưới phải (tự chờ ẩn và bấm mép dưới còn hở trên mọi tỉ lệ 1:1..2,6:1, không bấm nhầm Claim! hay Build)",
-      "Sửa lỗi nâng tường hụt trên Android / cloud phone 720p và ở mấy viên cuối của 1 cấp tường (? đoạn x 5.000.000 vàng): tối ưu nhận đồng xu vàng, nền nút & khớp tổng giá 720p, hỗ trợ máy tai thỏ, khôi phục số đoạn duy nhất khớp tổng giá và tự hạ nâng từng đoạn khi không xác minh được tổng nhiều đoạn",
-      "Cập nhật Trợ lý AI: thêm hướng dẫn cảnh báo ICP registration info trên máy tính bảng ROM nội địa Trung Quốc và cách chỉnh Thanh triển khai về Mặc định khi thả quân vướng vùng đỏ",
-      "PC Windows: thêm giao diện thẻ xem trước Rush Hall 6 trong Làng chính"
+      "PC Windows: thêm giao diện trang Đánh 3 Sao (3 chế độ Đánh Rank · Đánh War · Hội chiến 7 ngày CWL, dải tiến độ 7 ngày, bản đồ Radar chiến thuật & quy trình 8 bước — bản xem trước giao diện).",
+      "PC & Android: tự động cộng Phần thưởng thêm khi thắng (100% THƯỞNG khi thắng >= 1 sao) vào tổng Vàng / Dầu / Dầu đen thu được, Trận gần đây, tốc độ / giờ và ghi rõ trong Nhật ký trên mọi tỉ lệ màn hình.",
+      "Android & PC: sửa triệt để lỗi “Thao tác Trợ năng bị hệ thống hủy” (tự thử lại khi hệ thống hủy cử chỉ, làm an toàn thu nhỏ 2 ngón không dừng bot khi ROM chặn đa điểm) và hoàn thiện hỗ trợ tỉ lệ màn hình 3168×1440 (1980×900) trên mọi chức năng + sửa cắt chữ thanh tiêu đề Android."
     ]
   },
   "android": {
-    "version": "1.0.42",
-    "version_code": 43,
+    "version": "1.0.43",
+    "version_code": 44,
     "min_version_code": 0,
-    "url": "https://github.com/NguyenHoang-pluto/autococ/releases/download/v2026.11.26-225652/AutoCoC.apk",
-    "sha256": "3cb78d5087a9e27b6de315f9169469bc46c8017fcae4925d1fb8c023334cabfd",
+    "url": "https://github.com/NguyenHoang-pluto/autococ/releases/download/v2026.11.27-080726/AutoCoC.apk",
+    "sha256": "3ae51e2c625a8fa5b8fa6a691c651e21f38dddcc88a578bf2795d1fd839c84d4",
     "size": 64810151,
     "notes": [
-      "Sửa lỗi nâng tường & nâng công trình Làng chính khi bảng sự kiện Hành trình Tướng (Hero Journey / Claim!) che ô thợ xây góc dưới phải (tự chờ ẩn và bấm mép dưới còn hở trên mọi tỉ lệ 1:1..2,6:1, không bấm nhầm Claim! hay Build)",
-      "Sửa lỗi nâng tường hụt trên Android / cloud phone 720p và ở mấy viên cuối của 1 cấp tường (? đoạn x 5.000.000 vàng): tối ưu nhận đồng xu vàng, nền nút & khớp tổng giá 720p, hỗ trợ máy tai thỏ, khôi phục số đoạn duy nhất khớp tổng giá và tự hạ nâng từng đoạn khi không xác minh được tổng nhiều đoạn",
-      "Cập nhật Trợ lý AI: thêm hướng dẫn cảnh báo ICP registration info trên máy tính bảng ROM nội địa Trung Quốc và cách chỉnh Thanh triển khai về Mặc định khi thả quân vướng vùng đỏ",
-      "PC Windows: thêm giao diện thẻ xem trước Rush Hall 6 trong Làng chính"
+      "PC Windows: thêm giao diện trang Đánh 3 Sao (3 chế độ Đánh Rank · Đánh War · Hội chiến 7 ngày CWL, dải tiến độ 7 ngày, bản đồ Radar chiến thuật & quy trình 8 bước — bản xem trước giao diện).",
+      "PC & Android: tự động cộng Phần thưởng thêm khi thắng (100% THƯỞNG khi thắng >= 1 sao) vào tổng Vàng / Dầu / Dầu đen thu được, Trận gần đây, tốc độ / giờ và ghi rõ trong Nhật ký trên mọi tỉ lệ màn hình.",
+      "Android & PC: sửa triệt để lỗi “Thao tác Trợ năng bị hệ thống hủy” (tự thử lại khi hệ thống hủy cử chỉ, làm an toàn thu nhỏ 2 ngón không dừng bot khi ROM chặn đa điểm) và hoàn thiện hỗ trợ tỉ lệ màn hình 3168×1440 (1980×900) trên mọi chức năng + sửa cắt chữ thanh tiêu đề Android."
     ]
   }
 }
