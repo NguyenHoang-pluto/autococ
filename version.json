@@ -1,33 +1,33 @@
 {
   "schema": 1,
-  "updated_at": "2026-11-27T13:50:39Z",
-  "tag": "v2026.11.27-204927",
+  "updated_at": "2026-11-27T15:13:48Z",
+  "tag": "v2026.11.27-221241",
   "blocked": false,
   "block_message": "",
   "revoked_ids": [],
   "windows": {
-    "version": "0.1.39",
-    "min_version": "0.1.39",
-    "url": "https://github.com/NguyenHoang-pluto/autococ/releases/download/v2026.11.27-204927/AutoCoC-Windows.zip",
-    "sha256": "3ae23e566c031ac6ee1b733b20e5fd84427ebb5a0e5d1415905acca76f75b99d",
-    "size": 84005227,
+    "version": "0.1.40",
+    "min_version": "0.1.40",
+    "url": "https://github.com/NguyenHoang-pluto/autococ/releases/download/v2026.11.27-221241/NHClash-Windows.zip",
+    "sha256": "370ce9d4e6e1f0565c42a1b8744ce0b8f5fb52d7eb7f1a0ad049502b98189263",
+    "size": 84014243,
     "notes": [
-      "Nâng cấp bảo mật bản quyền v2: đổi mới toàn bộ cặp khóa ECDSA v2, khóa vĩnh viễn mọi bản cũ và key cũ v1",
-      "Gỡ bỏ hoàn toàn giao diện/mã quản trị khỏi ứng dụng khách, bổ sung thu hồi key từ xa",
-      "Tối ưu Sắp xếp nhà từ ảnh (nhanh hơn 3,3x, chuẩn 4/4 Bình Tiên Dược & Bình Vàng, hộp Tháp Hỏa Ngục 5x5 & Pháo Đài Đá, hỗ trợ dán link ảnh từ internet)"
+      "Đổi tên thương hiệu sang NHClash (NHClash.exe / NHClash.apk)",
+      "Nâng cấp máy chủ bản quyền Online v3 (Cloudflare + chữ ký ECDSA P-256 theo phiên, kiểm tra 3 phút, khóa key & đá phiên dùng chung tức thì)",
+      "Khóa chặt cập nhật bắt buộc — chặn hoàn toàn việc bấm Bắt đầu nhanh vượt bản cũ"
     ]
   },
   "android": {
-    "version": "1.0.44",
-    "version_code": 45,
-    "min_version_code": 45,
-    "url": "https://github.com/NguyenHoang-pluto/autococ/releases/download/v2026.11.27-204927/AutoCoC.apk",
-    "sha256": "48128b34cdc89d3ce115f8aa42999ea46f5b1fdf3559c7c6fc79e904f1339f55",
-    "size": 64807815,
+    "version": "1.0.45",
+    "version_code": 46,
+    "min_version_code": 46,
+    "url": "https://github.com/NguyenHoang-pluto/autococ/releases/download/v2026.11.27-221241/NHClash.apk",
+    "sha256": "c591bcc0d31a30ab718dcc139ea980ec6e205886aec22c482cd0169a7c709ea4",
+    "size": 64807823,
     "notes": [
-      "Nâng cấp bảo mật bản quyền v2: đổi mới toàn bộ cặp khóa ECDSA v2, khóa vĩnh viễn mọi bản cũ và key cũ v1",
-      "Gỡ bỏ hoàn toàn giao diện/mã quản trị khỏi ứng dụng khách, bổ sung thu hồi key từ xa",
-      "Tối ưu Sắp xếp nhà từ ảnh (nhanh hơn 3,3x, chuẩn 4/4 Bình Tiên Dược & Bình Vàng, hộp Tháp Hỏa Ngục 5x5 & Pháo Đài Đá, hỗ trợ dán link ảnh từ internet)"
+      "Đổi tên thương hiệu sang NHClash (NHClash.exe / NHClash.apk)",
+      "Nâng cấp máy chủ bản quyền Online v3 (Cloudflare + chữ ký ECDSA P-256 theo phiên, kiểm tra 3 phút, khóa key & đá phiên dùng chung tức thì)",
+      "Khóa chặt cập nhật bắt buộc — chặn hoàn toàn việc bấm Bắt đầu nhanh vượt bản cũ"
     ]
   }
 }
