@@ -1,31 +1,33 @@
 {
   "schema": 1,
-  "updated_at": "2026-11-28T04:23:33Z",
-  "tag": "v2026.11.28-112230",
+  "updated_at": "2026-11-28T11:38:09Z",
+  "tag": "v2026.11.28-183653",
   "blocked": false,
   "block_message": "",
   "revoked_ids": [],
   "windows": {
-    "version": "0.1.46",
-    "min_version": "0.1.46",
-    "url": "https://github.com/NguyenHoang-pluto/autococ/releases/download/v2026.11.28-112230/NHClash-Windows.zip",
-    "sha256": "d57f540e2bb0ce6f3f19f33c7499da70376fda8f52a3886027a8997f98e382b0",
-    "size": 90232761,
+    "version": "0.1.47",
+    "min_version": "",
+    "url": "https://github.com/NguyenHoang-pluto/autococ/releases/download/v2026.11.28-183653/NHClash-Windows.zip",
+    "sha256": "c328a0d37b288b79d1994d48b3fb1ac9515e766a82bcd2305fd3f51349223b30",
+    "size": 90248636,
     "notes": [
-      "Thiết kế lại giao diện nhập key bản quyền chuyên nghiệp và hiện đại hơn"
+      "Sửa lỗi bấm hụt hộp xác nhận nâng tường và hoàn thiện toàn bộ chức năng trên tỉ lệ màn hình 19:9 (1900x900, Samsung camera đục lỗ + thanh điều hướng 3 nút)",
+      "Nâng cấp nhận diện & thu hoạch Xe Tiên dược (xe dầu) Làng đêm trên mọi tỉ lệ (1:1..2,6:1, 720p, màn rộng), nhận chuẩn cả phông cỏ xanh & hang đá"
     ]
   },
   "android": {
-    "version": "1.0.51",
-    "version_code": 52,
-    "min_version_code": 52,
-    "url": "https://github.com/NguyenHoang-pluto/autococ/releases/download/v2026.11.28-112230/NHClash.apk",
-    "sha256": "5ec35a89303022702f0c28bbb15565158df23a4e502d52d7592534c9add5f95f",
+    "version": "1.0.52",
+    "version_code": 53,
+    "min_version_code": 0,
+    "url": "https://github.com/NguyenHoang-pluto/autococ/releases/download/v2026.11.28-183653/NHClash.apk",
+    "sha256": "e7ab09a548c20631d255fc69c867388b6dda7d68655045d9608f5c5e59884e92",
     "size": 65060968,
     "notes": [
-      "Thiết kế lại giao diện nhập key bản quyền chuyên nghiệp và hiện đại hơn"
+      "Sửa lỗi bấm hụt hộp xác nhận nâng tường và hoàn thiện toàn bộ chức năng trên tỉ lệ màn hình 19:9 (1900x900, Samsung camera đục lỗ + thanh điều hướng 3 nút)",
+      "Nâng cấp nhận diện & thu hoạch Xe Tiên dược (xe dầu) Làng đêm trên mọi tỉ lệ (1:1..2,6:1, 720p, màn rộng), nhận chuẩn cả phông cỏ xanh & hang đá"
     ]
   },
   "policy_issued_day": 20785,
-  "policy_sig": "ce41ea61d8c0205e0dd5dc002597dd15cf5cb967fb3791df479af625c40286aabbb3d34f1adc9e3fa391fa50657210934598516546e25cdfef3babc1bf4f1bc6"
+  "policy_sig": "28b12c679ae69b1f6aac6c205f6542b270df25bbe5b2f1d9be2ee562a266f723cc6b51ed38a88556b0f95d553caadcfba53a7a567f20e5c64471cc5c85715979"
 }
