@@ -1,31 +1,31 @@
 {
   "schema": 1,
-  "updated_at": "2026-11-28T03:56:54Z",
-  "tag": "v2026.11.28-105541",
+  "updated_at": "2026-11-28T04:23:33Z",
+  "tag": "v2026.11.28-112230",
   "blocked": false,
   "block_message": "",
   "revoked_ids": [],
   "windows": {
-    "version": "0.1.45",
-    "min_version": "0.1.45",
-    "url": "https://github.com/NguyenHoang-pluto/autococ/releases/download/v2026.11.28-105541/NHClash-Windows.zip",
-    "sha256": "bac4edab5b589fa6e3920c108bce9996473680fed1f2f6000f7a42f7f3ea0c08",
-    "size": 89433955,
+    "version": "0.1.46",
+    "min_version": "0.1.46",
+    "url": "https://github.com/NguyenHoang-pluto/autococ/releases/download/v2026.11.28-112230/NHClash-Windows.zip",
+    "sha256": "d57f540e2bb0ce6f3f19f33c7499da70376fda8f52a3886027a8997f98e382b0",
+    "size": 90232761,
     "notes": [
-      "Tối ưu tốc độ khởi chạy và cải thiện độ ổn định ứng dụng"
+      "Thiết kế lại giao diện nhập key bản quyền chuyên nghiệp và hiện đại hơn"
     ]
   },
   "android": {
-    "version": "1.0.50",
-    "version_code": 51,
-    "min_version_code": 51,
-    "url": "https://github.com/NguyenHoang-pluto/autococ/releases/download/v2026.11.28-105541/NHClash.apk",
-    "sha256": "15b9012b95f734925a77a7ab50437cfe863d106e12f1aa1953220b118570994c",
+    "version": "1.0.51",
+    "version_code": 52,
+    "min_version_code": 52,
+    "url": "https://github.com/NguyenHoang-pluto/autococ/releases/download/v2026.11.28-112230/NHClash.apk",
+    "sha256": "5ec35a89303022702f0c28bbb15565158df23a4e502d52d7592534c9add5f95f",
     "size": 65060968,
     "notes": [
-      "Tối ưu tốc độ khởi chạy và cải thiện độ ổn định ứng dụng"
+      "Thiết kế lại giao diện nhập key bản quyền chuyên nghiệp và hiện đại hơn"
     ]
   },
   "policy_issued_day": 20785,
-  "policy_sig": "f8b3676d8fbc81ccbbeb8955f4379052ee1cafffa35a10e92fdbdb0ec70ec05378e0d77d80a28bcea02e26b4af0ed9f47d34e37059c1c5672903d7a27165922e"
+  "policy_sig": "ce41ea61d8c0205e0dd5dc002597dd15cf5cb967fb3791df479af625c40286aabbb3d34f1adc9e3fa391fa50657210934598516546e25cdfef3babc1bf4f1bc6"
 }
