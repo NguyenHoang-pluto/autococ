@@ -1,31 +1,31 @@
 {
   "schema": 1,
-  "updated_at": "2026-11-27T17:19:57Z",
-  "tag": "v2026.11.28-001855",
+  "updated_at": "2026-11-28T03:56:54Z",
+  "tag": "v2026.11.28-105541",
   "blocked": false,
   "block_message": "",
   "revoked_ids": [],
   "windows": {
-    "version": "0.1.44",
-    "min_version": "0.1.44",
-    "url": "https://github.com/NguyenHoang-pluto/autococ/releases/download/v2026.11.28-001855/NHClash-Windows.zip",
-    "sha256": "2a695b09833a4de975680de5caec641dcf39c24efdf2333dd836bfa70c4333c3",
-    "size": 84155709,
+    "version": "0.1.45",
+    "min_version": "0.1.45",
+    "url": "https://github.com/NguyenHoang-pluto/autococ/releases/download/v2026.11.28-105541/NHClash-Windows.zip",
+    "sha256": "bac4edab5b589fa6e3920c108bce9996473680fed1f2f6000f7a42f7f3ea0c08",
+    "size": 89433955,
     "notes": [
-      "Bản cập nhật mới"
+      "Tối ưu tốc độ khởi chạy và cải thiện độ ổn định ứng dụng"
     ]
   },
   "android": {
-    "version": "1.0.49",
-    "version_code": 50,
-    "min_version_code": 50,
-    "url": "https://github.com/NguyenHoang-pluto/autococ/releases/download/v2026.11.28-001855/NHClash.apk",
-    "sha256": "4442d048cb9688bf5069de1a835ac8a9c7f895997594ae8595fed600160d827b",
-    "size": 64926411,
+    "version": "1.0.50",
+    "version_code": 51,
+    "min_version_code": 51,
+    "url": "https://github.com/NguyenHoang-pluto/autococ/releases/download/v2026.11.28-105541/NHClash.apk",
+    "sha256": "15b9012b95f734925a77a7ab50437cfe863d106e12f1aa1953220b118570994c",
+    "size": 65060968,
     "notes": [
-      "Bản cập nhật mới"
+      "Tối ưu tốc độ khởi chạy và cải thiện độ ổn định ứng dụng"
     ]
   },
   "policy_issued_day": 20785,
-  "policy_sig": "98752a8739ff5caf2ffde13f5fdb73936c22b9bbe98005556929ef655f958fa2c9e9189f31750856746bf1c0a8548388884a92b7d6e181aa97717b223bb0d0e6"
+  "policy_sig": "f8b3676d8fbc81ccbbeb8955f4379052ee1cafffa35a10e92fdbdb0ec70ec05378e0d77d80a28bcea02e26b4af0ed9f47d34e37059c1c5672903d7a27165922e"
 }
