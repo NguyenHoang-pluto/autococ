@@ -3,412 +3,459 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>NHClash — Bot farm Clash of Clans</title>
-<meta name="description" content="Tải NHClash cho Windows (LDPlayer) và Android: tự farm Clash of Clans, đầy kho tự nâng tường. Hướng dẫn cài đặt từng bước.">
-<meta property="og:title" content="NHClash — Bot farm Clash of Clans">
-<meta property="og:description" content="Tự farm, đầy kho tự nâng tường. Bản Windows (LDPlayer) và Android.">
+<title>NHClash — Cổng tải chính thức cho Windows &amp; Android</title>
+<meta name="description" content="NHClash cho Windows (LDPlayer) và Android: tự farm tài nguyên, đầy kho tự nâng tường, Làng đêm, Kinh đô Hội, Trò chơi Hội. 0 thu thập thông tin cá nhân.">
+<meta property="og:title" content="NHClash — Tự động hóa Clash of Clans (Windows &amp; Android)">
+<meta property="og:description" content="Tự farm tài nguyên, đầy kho tự nâng tường, Làng đêm, Kinh đô Hội, Trò chơi Hội. Không thu thập thông tin người dùng.">
 <meta property="og:image" content="https://nguyenhoang-pluto.github.io/autococ/assets/logo.png">
 <meta property="og:url" content="https://nguyenhoang-pluto.github.io/autococ/">
-<meta name="theme-color" content="#0b1426">
+<meta name="theme-color" content="#070e1d">
 <link rel="icon" href="assets/favicon.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Be+Vietnam+Pro:wght@400;500;600;700&display=swap" rel="stylesheet">
-<style>
-  :root {
-    --bg: #0b1426;
-    --bg-2: #111d36;
-    --card: rgba(17, 29, 54, .82);
-    --card-2: rgba(25, 40, 72, .9);
-    --line: rgba(255, 255, 255, .09);
-    --text: #f2f5fb;
-    --muted: #a9b4cc;
-    --gold: #ffd23f;
-    --gold-2: #f4a51c;
-    --gold-edge: #a8650a;
-    --green: #8ee03a;
-    --green-2: #4fae1c;
-    --green-edge: #2f7410;
-    --blue: #3b7bff;
-    --pink: #e24bff;
-    --radius: 18px;
-    --shadow: 0 18px 50px rgba(0, 0, 0, .45);
-  }
-  * { box-sizing: border-box; }
-  html { scroll-behavior: smooth; }
-  body {
-    margin: 0;
-    font-family: "Be Vietnam Pro", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
-    color: var(--text);
-    background: var(--bg);
-    line-height: 1.6;
-    -webkit-font-smoothing: antialiased;
-  }
-  body::before {
-    content: "";
-    position: fixed;
-    inset: 0;
-    z-index: -1;
-    background:
-      radial-gradient(1200px 600px at 75% -10%, rgba(59, 123, 255, .28), transparent 60%),
-      linear-gradient(180deg, rgba(11, 20, 38, .62) 0%, rgba(11, 20, 38, .92) 45%, var(--bg) 100%),
-      url("assets/bg.jpg") center top / cover no-repeat;
-  }
-  a { color: var(--gold); }
-  img { max-width: 100%; display: block; }
-  .wrap { width: min(1120px, 100% - 32px); margin-inline: auto; }
-  h1, h2, h3, .brand, .btn { font-family: "Baloo 2", system-ui, sans-serif; }
-  h1, h2, h3 { line-height: 1.15; margin: 0; }
-  .stroke {
-    color: #fff;
-    text-shadow: 0 3px 0 rgba(0, 0, 0, .55), 0 0 1px #000, 1px 1px 0 #1a1a1a, -1px -1px 0 #1a1a1a,
-      1px -1px 0 #1a1a1a, -1px 1px 0 #1a1a1a;
-  }
-
-  /* ---------------------------------------------------------------- header */
-  header {
-    position: sticky;
-    top: 0;
-    z-index: 20;
-    backdrop-filter: blur(12px);
-    background: rgba(11, 20, 38, .72);
-    border-bottom: 1px solid var(--line);
-  }
-  .nav { display: flex; align-items: center; gap: 18px; height: 64px; }
-  .brand { display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--text); font-size: 24px; font-weight: 800; }
-  .brand img { width: 42px; height: 42px; border-radius: 50%; }
-  .nav nav { margin-left: auto; display: flex; gap: 4px; }
-  .nav nav a { color: var(--muted); text-decoration: none; font-weight: 600; font-size: 15px; padding: 8px 12px; border-radius: 10px; }
-  .nav nav a:hover { color: var(--text); background: rgba(255, 255, 255, .06); }
-
-  /* ---------------------------------------------------------------- buttons */
-  .btn {
-    --top: var(--gold); --bot: var(--gold-2); --edge: var(--gold-edge);
-    display: inline-flex; align-items: center; gap: 12px;
-    padding: 12px 22px 14px; min-height: 64px;
-    border-radius: 16px; border: 2px solid rgba(0, 0, 0, .55);
-    background: linear-gradient(180deg, var(--top), var(--bot));
-    box-shadow: 0 6px 0 var(--edge), 0 10px 24px rgba(0, 0, 0, .35), inset 0 2px 0 rgba(255, 255, 255, .55);
-    color: #fff; text-decoration: none; font-weight: 800; font-size: 22px; line-height: 1.1;
-    transition: transform .08s ease, box-shadow .08s ease, filter .15s ease;
-    cursor: pointer;
-  }
-  .btn:hover { filter: brightness(1.06); }
-  .btn:active { transform: translateY(4px); box-shadow: 0 2px 0 var(--edge), 0 6px 14px rgba(0, 0, 0, .35), inset 0 2px 0 rgba(255, 255, 255, .5); }
-  .btn:focus-visible { outline: 3px solid #fff; outline-offset: 3px; }
-  .btn .label { display: flex; flex-direction: column; text-shadow: 0 2px 0 rgba(0, 0, 0, .45), 0 0 2px rgba(0, 0, 0, .6); }
-  .btn small { font-family: "Be Vietnam Pro", sans-serif; font-weight: 600; font-size: 13px; opacity: .95; }
-  .btn svg { width: 30px; height: 30px; flex: none; filter: drop-shadow(0 2px 0 rgba(0, 0, 0, .4)); }
-  .btn.green { --top: var(--green); --bot: var(--green-2); --edge: var(--green-edge); }
-  .btn.small { min-height: 44px; padding: 8px 16px 10px; font-size: 17px; border-radius: 12px; box-shadow: 0 4px 0 var(--edge), inset 0 2px 0 rgba(255, 255, 255, .5); }
-  .btn.small:active { transform: translateY(3px); box-shadow: 0 1px 0 var(--edge); }
-
-  /* ---------------------------------------------------------------- hero */
-  .hero { padding: 64px 0 40px; }
-  .hero-grid { display: grid; grid-template-columns: 1.15fr .85fr; gap: 40px; align-items: center; }
-  .pill { display: inline-flex; align-items: center; gap: 8px; padding: 6px 14px; border-radius: 999px; background: rgba(255, 210, 63, .12); border: 1px solid rgba(255, 210, 63, .35); color: var(--gold); font-weight: 600; font-size: 14px; }
-  .hero h1 { font-size: clamp(36px, 5.2vw, 58px); margin: 16px 0 14px; font-weight: 800; letter-spacing: -.5px; text-wrap: balance; }
-  .hero h1 .hl { color: var(--gold); }
-  .hero p.lead { font-size: 18px; color: #d7deee; margin: 0 0 28px; max-width: 560px; }
-  .cta { display: flex; flex-wrap: wrap; gap: 16px; }
-  .meta { margin-top: 22px; display: flex; flex-wrap: wrap; gap: 10px 22px; color: var(--muted); font-size: 14px; }
-  .meta b { color: var(--text); }
-  .meta .dot { display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: var(--green); margin-right: 6px; box-shadow: 0 0 10px var(--green); }
-  .hero-art { position: relative; justify-self: center; width: min(360px, 80vw); aspect-ratio: 1; }
-  .hero-art .glow { position: absolute; inset: 8%; border-radius: 40px; background: radial-gradient(circle, rgba(59, 123, 255, .55), transparent 70%); filter: blur(30px); }
-  .hero-art .logo { position: relative; width: 100%; border-radius: 50%; filter: drop-shadow(0 18px 36px rgba(0, 0, 0, .55)); animation: float 6s ease-in-out infinite; }
-  .hero-art .res { position: absolute; width: 64px; filter: drop-shadow(0 8px 10px rgba(0, 0, 0, .45)); animation: float 5s ease-in-out infinite; }
-  .hero-art .r1 { left: -26px; top: 18%; animation-delay: -1s; }
-  .hero-art .r2 { right: -22px; top: 52%; animation-delay: -2.5s; }
-  .hero-art .r3 { left: 8%; bottom: -18px; width: 52px; animation-delay: -3.5s; }
-  @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
-
-  /* ---------------------------------------------------------------- sections */
-  section { padding: 56px 0; }
-  .sec-head { text-align: center; margin-bottom: 34px; }
-  .sec-head h2 { font-size: clamp(30px, 4vw, 42px); font-weight: 800; }
-  .sec-head p { color: var(--muted); margin: 8px auto 0; max-width: 640px; text-wrap: balance; }
-  .card { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); box-shadow: var(--shadow); backdrop-filter: blur(8px); }
-
-  .features { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
-  .feature { padding: 24px; }
-  .feature .ico { width: 52px; height: 52px; border-radius: 14px; display: grid; place-items: center; margin-bottom: 14px; background: linear-gradient(180deg, #2a4a8f, #1b3266); border: 1px solid rgba(255, 255, 255, .12); }
-  .feature .ico img { width: 34px; }
-  .feature .ico svg { width: 28px; height: 28px; color: var(--gold); }
-  .feature h3 { font-size: 22px; font-weight: 700; margin-bottom: 6px; }
-  .feature p { margin: 0; color: var(--muted); font-size: 15px; }
-
-  /* tabs */
-  .tabs { display: flex; justify-content: center; gap: 10px; margin-bottom: 24px; flex-wrap: wrap; }
-  .tab { font-family: "Baloo 2", sans-serif; font-weight: 700; font-size: 18px; color: var(--muted); background: rgba(255, 255, 255, .05); border: 1px solid var(--line); border-radius: 999px; padding: 8px 20px; cursor: pointer; display: inline-flex; align-items: center; gap: 8px; }
-  .tab svg { width: 20px; height: 20px; }
-  .tab[aria-selected="true"] { color: #1d1400; background: linear-gradient(180deg, var(--gold), var(--gold-2)); border-color: rgba(0, 0, 0, .4); box-shadow: 0 3px 0 var(--gold-edge); }
-  .panel[hidden] { display: none; }
-  .need { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-bottom: 18px; }
-  .need div { padding: 14px 16px; border-radius: 14px; background: rgba(255, 255, 255, .04); border: 1px dashed rgba(255, 255, 255, .14); font-size: 14px; color: var(--muted); }
-  .need b { display: block; color: var(--text); font-size: 15px; }
-  .steps { list-style: none; padding: 0; margin: 0; display: grid; gap: 14px; counter-reset: step; }
-  .step { position: relative; padding: 20px 22px 20px 82px; }
-  .step::before {
-    counter-increment: step; content: counter(step);
-    position: absolute; left: 20px; top: 18px; width: 44px; height: 44px; border-radius: 12px;
-    display: grid; place-items: center; font-family: "Baloo 2", sans-serif; font-weight: 800; font-size: 24px; color: #fff;
-    background: linear-gradient(180deg, var(--gold), var(--gold-2)); border: 2px solid rgba(0, 0, 0, .5);
-    box-shadow: 0 4px 0 var(--gold-edge); text-shadow: 0 2px 0 rgba(0, 0, 0, .45);
-  }
-  .step h3 { font-size: 21px; font-weight: 700; margin-bottom: 4px; }
-  .step p { margin: 4px 0 0; color: #d3dbeb; font-size: 15px; }
-  .step .path { display: inline-block; font-weight: 600; color: var(--text); background: rgba(255, 255, 255, .07); border: 1px solid var(--line); border-radius: 8px; padding: 1px 8px; margin: 2px 0; }
-  .tip { margin-top: 10px; padding: 10px 14px; border-radius: 12px; font-size: 14px; background: rgba(255, 210, 63, .09); border: 1px solid rgba(255, 210, 63, .28); color: #f6e7b4; }
-  .tip.warn { background: rgba(255, 99, 99, .08); border-color: rgba(255, 120, 120, .3); color: #ffd3d3; }
-  .step .btn { margin-top: 12px; }
-
-  /* key */
-  .key-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
-  .key-step { padding: 24px; text-align: center; }
-  .key-step .num { font-family: "Baloo 2", sans-serif; font-size: 46px; font-weight: 800; color: var(--gold); line-height: 1; }
-  .key-step h3 { font-size: 21px; margin: 8px 0 6px; }
-  .key-step p { margin: 0; color: var(--muted); font-size: 15px; }
-  .contact { margin-top: 22px; padding: 22px; display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 14px; text-align: center; }
-  .contact p { margin: 0; width: 100%; color: var(--muted); }
-
-  /* faq */
-  .faq { display: grid; gap: 12px; max-width: 860px; margin-inline: auto; }
-  details { padding: 0; }
-  summary { list-style: none; cursor: pointer; padding: 18px 56px 18px 22px; font-weight: 700; font-size: 17px; position: relative; }
-  summary::-webkit-details-marker { display: none; }
-  summary::after { content: "+"; position: absolute; right: 22px; top: 50%; transform: translateY(-50%); font-family: "Baloo 2", sans-serif; font-size: 28px; color: var(--gold); transition: transform .2s; }
-  details[open] summary::after { transform: translateY(-50%) rotate(45deg); }
-  details .ans { padding: 0 22px 18px; color: #cfd7e8; font-size: 15px; }
-  details .ans p { margin: 0 0 8px; }
-
-  /* changelog */
-  .changes { max-width: 860px; margin: 22px auto 0; padding: 18px 22px; }
-  .changes h3 { font-size: 20px; margin-bottom: 6px; }
-  .changes ul { margin: 6px 0 0; padding-left: 20px; color: #cfd7e8; }
-  .changes[hidden] { display: none; }
-
-  footer { padding: 36px 0 48px; color: var(--muted); font-size: 13px; text-align: center; border-top: 1px solid var(--line); }
-  footer p { margin: 6px 0; }
-
-  @media (max-width: 900px) {
-    .hero-grid { grid-template-columns: 1fr; text-align: center; }
-    .hero p.lead { margin-inline: auto; }
-    .cta, .meta { justify-content: center; }
-    .hero-art { order: -1; width: min(240px, 62vw); }
-    .features, .key-grid { grid-template-columns: 1fr 1fr; }
-    .need { grid-template-columns: 1fr; }
-  }
-  @media (max-width: 640px) {
-    .nav nav { display: none; }
-    .nav .btn.small { margin-left: auto; }
-    .hero { padding-top: 36px; }
-    .hero h1 { font-size: 31px; }
-    .features, .key-grid { grid-template-columns: 1fr; }
-    .cta .btn { width: 100%; justify-content: center; }
-    .step { padding: 18px 18px 18px 72px; }
-    .step::before { left: 16px; width: 40px; height: 40px; font-size: 22px; }
-  }
-  @media (min-width: 641px) { .nav .btn.small { display: none; } }
-  @media (prefers-reduced-motion: reduce) { * { animation: none !important; transition: none !important; scroll-behavior: auto !important; } }
-</style>
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
   <symbol id="i-win" viewBox="0 0 24 24"><path fill="currentColor" d="M3 5.1 10.4 4v7.2H3V5.1zm0 13.8L10.4 20v-7.1H3v6zm8.3 1.2L21 21.5v-8.6h-9.7v7.2zm0-16.2v7.3H21V2.5l-9.7 1.4z"/></symbol>
   <symbol id="i-android" viewBox="0 0 24 24"><path fill="currentColor" d="M17.6 9.48 19.44 6.3a.38.38 0 0 0-.66-.38L16.9 9.14a11.4 11.4 0 0 0-9.8 0L5.22 5.92a.38.38 0 0 0-.66.38L6.4 9.48A10.8 10.8 0 0 0 1 18h22a10.8 10.8 0 0 0-5.4-8.52zM7 15.25a1.25 1.25 0 1 1 0-2.5 1.25 1.25 0 0 1 0 2.5zm10 0a1.25 1.25 0 1 1 0-2.5 1.25 1.25 0 0 1 0 2.5z"/></symbol>
   <symbol id="i-search" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></g></symbol>
-  <symbol id="i-sword" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 17.5 3 6V3h3l11.5 11.5"/><path d="m13 19 6-6M16 16l4 4M19 21l2-2"/></g></symbol>
   <symbol id="i-shield" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></g></symbol>
-  <symbol id="i-zap" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round" d="M13 2 3 14h9l-1 8 10-12h-9l1-8z"/></symbol>
-  <symbol id="i-devices" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="14" height="10" rx="2"/><path d="M6 18h6"/><rect x="17" y="8" width="5" height="12" rx="1.5"/></g></symbol>
   <symbol id="i-chat" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round" d="M21 12a8 8 0 0 1-11.7 7.1L3 21l1.9-6.3A8 8 0 1 1 21 12z"/></symbol>
+  <symbol id="i-menu" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" d="M4 7h16M4 12h16M4 17h16"/></symbol>
 </svg>
 
 <header>
   <div class="wrap nav">
-    <a class="brand" href="#top"><img src="assets/logo.png" alt="">NHClash</a>
-    <nav aria-label="Mục lục">
+    <a class="brand" href="#top">
+      <img src="assets/logo.png" alt="NHClash">
+      <span>NHClash<small>Windows &amp; Android</small></span>
+    </a>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Mở trình đơn" aria-expanded="false">
+      <svg width="22" height="22"><use href="#i-menu"/></svg>
+    </button>
+    <nav class="nav-links" id="nav-links" aria-label="Điều hướng chính">
       <a href="#tinh-nang">Tính năng</a>
+      <a href="#cong-cu">Ước tính Tường</a>
       <a href="#cai-dat">Cài đặt</a>
-      <a href="#key">Nhận key</a>
+      <a href="#cap-nhat">Phiên bản</a>
       <a href="#hoi-dap">Hỏi đáp</a>
+      <a href="privacy.html">Bảo mật</a>
+      <a href="terms.html">Điều khoản</a>
+      <a class="btn small nav-cta" href="#tai-ve">Tải ngay</a>
     </nav>
-    <a class="btn small" href="#tai-ve">Tải về</a>
   </div>
 </header>
 
 <main id="top">
-  <!-- ============================================================ HERO -->
+  <!-- ================================================================ HERO -->
   <section class="hero" id="tai-ve">
     <div class="wrap hero-grid">
       <div>
-        <span class="pill">⚡ Bot farm Clash of Clans</span>
+        <div class="hero-badges">
+          <span class="pill"><span class="pulse-dot"></span><span id="hero-ver-pill">Bản mới nhất · Windows &amp; Android</span></span>
+          <span class="pill green"><svg width="14" height="14"><use href="#i-shield"/></svg>0 thu thập thông tin</span>
+        </div>
         <h1 class="stroke">Tự farm tài nguyên,<br><span class="hl">đầy kho tự nâng tường</span></h1>
-        <p class="lead">NHClash tự tìm làng nhiều tài nguyên, thả quân – anh hùng – phép, kho gần đầy thì nâng tường tới khi cạn rồi đánh tiếp. Chạy trên giả lập LDPlayer (máy tính) hoặc điện thoại Android.</p>
+        <p class="lead">NHClash tự tìm làng nhiều tài nguyên, thả quân – anh hùng – phép chuẩn nhịp, tự nâng tường &amp; công trình 0 Ngọc, hỗ trợ đủ Làng đêm, Kinh đô Hội và Trò chơi Hội trên cả máy tính Windows lẫn điện thoại Android.</p>
         <div class="cta">
           <a class="btn" id="dl-win" href="#cai-dat">
             <svg><use href="#i-win"/></svg>
-            <span class="label">Tải cho Windows<small id="dl-win-sub">Giả lập LDPlayer 9</small></span>
+            <span class="label">Tải bản Windows<small id="dl-win-sub">LDPlayer 9 · Đa giả lập</small></span>
           </a>
           <a class="btn green" id="dl-apk" href="#cai-dat">
             <svg><use href="#i-android"/></svg>
-            <span class="label">Tải cho Android<small id="dl-apk-sub">File APK, không cần root</small></span>
+            <span class="label">Tải bản Android<small id="dl-apk-sub">File APK · Không cần root</small></span>
           </a>
         </div>
-        <div class="meta">
-          <span><span class="dot"></span><span id="ver">Bản mới nhất</span></span>
-          <span>Cần <b>key</b> để chạy — <a href="#key">cách nhận key</a></span>
+        <div class="hero-meta" id="hero-meta">
+          <span><span class="pulse-dot"></span><span id="ver">Bản mới nhất</span></span>
+          <span>An toàn tuyệt đối: <b>0 dùng Ngọc · 0 Nhẫn tường</b></span>
+          <span>Cần <b>key</b> — <a href="#key">hướng dẫn nhận key</a></span>
         </div>
       </div>
-      <div class="hero-art" aria-hidden="true">
-        <div class="glow"></div>
-        <img class="logo" src="assets/logo.png" alt="">
-        <img class="res r1" src="assets/gold.png" alt="">
-        <img class="res r2" src="assets/elixir.png" alt="">
-        <img class="res r3" src="assets/gem.png" alt="">
+      <div class="hero-visual" aria-hidden="true">
+        <div class="hero-orb">
+          <div class="glow"></div>
+          <img class="logo" src="assets/logo.png" alt="">
+          <img class="flt f1" src="assets/gold.png" alt="">
+          <img class="flt f2" src="assets/elixir.png" alt="">
+          <img class="flt f3" src="assets/dark.png" alt="">
+          <img class="flt f4" src="assets/trophy.png" alt="">
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- ======================================================== FEATURES -->
+  <!-- ===================================== REAL GITHUB STATS & ZERO-TRACKING -->
+  <section id="tong-quan" style="padding-top: 12px;">
+    <div class="wrap">
+      <div class="kpi-grid">
+        <article class="card kpi-card" style="--accent: var(--gold);">
+          <div class="kpi-top">
+            <span>Bản Windows (PC)</span>
+            <img src="assets/emulators.png" alt="">
+          </div>
+          <div class="kpi-val" id="kpi-win-ver">—</div>
+          <div class="kpi-sub">
+            <span>Dung lượng: <b id="kpi-win-size" class="mono">—</b></span>
+          </div>
+        </article>
+
+        <article class="card kpi-card" style="--accent: var(--green);">
+          <div class="kpi-top">
+            <span>Bản Android (APK)</span>
+            <img src="assets/star_bonus.png" alt="">
+          </div>
+          <div class="kpi-val" id="kpi-apk-ver">—</div>
+          <div class="kpi-sub">
+            <span>Dung lượng: <b id="kpi-apk-size" class="mono">—</b></span>
+            <span id="kpi-apk-code-wrap">Mã: <b id="kpi-apk-code" class="mono">—</b></span>
+          </div>
+        </article>
+
+        <article class="card kpi-card" style="--accent: var(--blue);">
+          <div class="kpi-top">
+            <span>Tổng lượt tải GitHub</span>
+            <img src="assets/trophy.png" alt="">
+          </div>
+          <div class="kpi-val" id="kpi-downloads">—</div>
+          <div class="kpi-sub">
+            <span>Số liệu thực từ GitHub Releases</span>
+          </div>
+        </article>
+
+        <article class="card kpi-card" style="--accent: var(--elixir);">
+          <div class="kpi-top">
+            <span>Tỉ lệ màn hình hỗ trợ</span>
+            <img src="assets/town_hall.png" alt="">
+          </div>
+          <div class="kpi-val">1:1 – 2,6:1</div>
+          <div class="kpi-sub">
+            <span>0 dùng Ngọc · 0 cần root</span>
+          </div>
+        </article>
+      </div>
+
+      <div class="card privacy-strip">
+        <div style="display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:14px;">
+          <div>
+            <h3><svg width="20" height="20"><use href="#i-shield"/></svg>Cam kết 0 thu thập thông tin cá nhân</h3>
+            <p style="margin-top:6px;">Cả trang web lẫn ứng dụng NHClash đều chạy cục bộ — <b>không cài cookie, không gắn Google Analytics, không lưu IP và không đọc dữ liệu tài khoản game của bạn</b>.</p>
+          </div>
+          <div class="p-actions">
+            <a class="btn ghost" href="privacy.html">Chính sách Bảo mật →</a>
+            <a class="btn ghost" href="terms.html">Điều khoản Sử dụng</a>
+          </div>
+        </div>
+        <div class="privacy-checks" style="grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));">
+          <span>✓ Không lưu Supercell ID / tên làng</span>
+          <span>✓ Không lưu IP hay theo dõi người dùng</span>
+          <span>✓ Ảnh màn hình chỉ xử lý trong RAM</span>
+          <span>✓ Kiểm tra toàn vẹn file bằng SHA-256</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================== FEATURES -->
   <section id="tinh-nang">
     <div class="wrap">
       <div class="sec-head">
-        <h2 class="stroke">Bot làm được gì?</h2>
-        <p>Bạn chỉ cần mở game ở màn hình làng rồi bấm Bắt đầu — mọi việc còn lại bot tự làm.</p>
+        <span class="eyebrow">9 mô-đun tự động toàn diện</span>
+        <h2 class="stroke">NHClash làm được những gì?</h2>
+        <p>Từ farm tài nguyên Làng chính đến Làng đêm, Kinh đô Hội, Trò chơi Hội và Sắp xếp nhà từ ảnh — tất cả giữ chốt an toàn 0 Ngọc.</p>
       </div>
-      <div class="features">
-        <article class="card feature">
-          <div class="ico"><svg><use href="#i-search"/></svg></div>
-          <h3>Tìm làng đúng ý</h3>
-          <p>Đọc số vàng, dầu, dầu đen của làng địch; chưa đủ mức bạn đặt thì bấm Tiếp theo. Tìm lâu thì tự hạ dần điều kiện.</p>
+
+      <div class="features-grid">
+        <article class="card card-hover feat-card">
+          <div class="feat-ico"><img src="assets/attack.png" alt=""></div>
+          <h3>Farm Làng chính thông minh</h3>
+          <p>Đọc chuẩn Vàng, Dầu, Dầu đen địch; hỗ trợ Nhắm tài nguyên (Goblin) &amp; 8 hướng thả quân, tự bật tốc độ 4x và cộng Phần thưởng thắng.</p>
+          <span class="feat-tag">Windows &amp; Android</span>
         </article>
-        <article class="card feature">
-          <div class="ico"><svg><use href="#i-sword"/></svg></div>
-          <h3>Đánh nhanh, thả đủ quân</h3>
-          <p>8 hướng đánh, rải hàng hoặc dồn góc; thả đúng số quân trên thẻ, thả phép vào chỗ quân đang đứng, tự bật kỹ năng anh hùng.</p>
+
+        <article class="card card-hover feat-card">
+          <div class="feat-ico"><img src="assets/wall.png" alt=""></div>
+          <h3>Đầy kho tự nâng tường hàng loạt</h3>
+          <p>Kho gần đầy tự chọn nhiều đoạn tường cùng cấp bằng Vàng, Dầu hoặc Cả hai. Chừa mức giữ lại, tuyệt đối không bấm Ngọc hay Nhẫn tường.</p>
+          <span class="feat-tag">Đa tỉ lệ 1:1 .. 2,6:1</span>
         </article>
-        <article class="card feature">
-          <div class="ico"><img src="assets/gold.png" alt=""></div>
-          <h3>Đầy kho tự nâng tường</h3>
-          <p>Kho vàng hoặc dầu gần đầy thì chọn nhiều đoạn tường cùng cấp, nâng một lần cho tới khi cạn, rồi quay lại farm cho đầy tiếp.</p>
+
+        <article class="card card-hover feat-card">
+          <div class="feat-ico"><img src="assets/builder.png" alt=""></div>
+          <h3>Tự nâng cấp công trình</h3>
+          <p>Ưu tiên Rẻ nhất / Đắt nhất / Nhanh nhất, chừa sẵn số thợ để dành nâng tường, nâng Nhà chính sau cùng và xác minh giá trước khi bấm.</p>
+          <span class="feat-tag">0 Ngọc · 0 Búa</span>
         </article>
-        <article class="card feature">
-          <div class="ico"><svg><use href="#i-shield"/></svg></div>
-          <h3>Giữ an toàn tài nguyên</h3>
-          <p>Luôn chừa lại số vàng / dầu bạn đặt. Không bao giờ dùng ngọc, Nhẫn tường hay dầu đen để nâng tường.</p>
+
+        <article class="card card-hover feat-card">
+          <div class="feat-ico"><img src="assets/builder_hall.png" alt=""></div>
+          <h3>Làng đêm 2.0 &amp; Xe Tiên dược</h3>
+          <p>Tự đi thuyền sang Làng đêm, đánh thắng lấy Thưởng sao hoặc farm dầu tím, thu Xe Tiên dược trên cả nền cỏ xanh &amp; hang đá, bật Tháp đồng hồ miễn phí.</p>
+          <span class="feat-tag">Cả 2 giai đoạn O.T.T.O</span>
         </article>
-        <article class="card feature">
-          <div class="ico"><svg><use href="#i-zap"/></svg></div>
-          <h3>Tự xử lý sự cố</h3>
-          <p>Mất kết nối thì tự tải lại game, tự đóng thông báo lạ, tự kết thúc trận khi không phá thêm được để đánh trận mới.</p>
+
+        <article class="card card-hover feat-card">
+          <div class="feat-ico"><img src="assets/clan_games.png" alt=""></div>
+          <h3>Trò chơi Hội 4.000 điểm tự động</h3>
+          <p>Quét 12 thẻ bằng hình ảnh + OCR, xếp hạng ưu tiên, tự mở Siêu quân bằng 25.000 Dầu đen, kẹp đúng số quân/phép yêu cầu rồi tự hoàn trả đội hình gốc.</p>
+          <span class="feat-tag">Điều phối cùng Hội</span>
         </article>
-        <article class="card feature">
-          <div class="ico"><svg><use href="#i-devices"/></svg></div>
-          <h3>Máy tính và điện thoại</h3>
-          <p>Bản Windows chạy với giả lập LDPlayer 9; bản Android chạy thẳng trên điện thoại, không cần root. Dùng chung một hệ thống key.</p>
+
+        <article class="card card-hover feat-card">
+          <div class="feat-ico"><img src="assets/capital_hall.png" alt=""></div>
+          <h3>Kinh đô Hội &amp; Đóng góp quân</h3>
+          <p>Tự chế tạo Vàng Kinh đô, góp công trình ưu tiên, tự đánh lượt Đột kích cuối tuần và trực cho quân/phép/cỗ máy đúng loại Hội yêu cầu.</p>
+          <span class="feat-tag">Trực Hội 24/7</span>
+        </article>
+
+        <article class="card card-hover feat-card">
+          <div class="feat-ico"><img src="assets/supercell_id.png" alt=""></div>
+          <h3>Đa tài khoản Supercell ID</h3>
+          <p>Tự xoay vòng danh sách tài khoản theo thời gian, số trận hoặc khi hoàn thành điều kiện thông minh (đầy kho, đủ 4.000đ, xong Làng đêm/Kinh đô).</p>
+          <span class="feat-tag">Hồ sơ riêng từng acc</span>
+        </article>
+
+        <article class="card card-hover feat-card">
+          <div class="feat-ico"><img src="assets/emulators.png" alt=""></div>
+          <h3>Đa giả lập &amp; Tắt màn hình PC</h3>
+          <p>Chạy song song hoặc xoay vòng nhiều LDPlayer cho PC yếu, cô lập dữ liệu từng máy và hỗ trợ tắt màn hình tiết kiệm điện mà bot vẫn chạy mượt.</p>
+          <span class="feat-tag">Độc quyền Windows</span>
+        </article>
+
+        <article class="card card-hover feat-card">
+          <div class="feat-ico"><img src="assets/layout.png" alt=""></div>
+          <h3>Sắp xếp nhà từ ảnh &amp; link</h3>
+          <p>Nhận diện sơ đồ trực tiếp từ ảnh chụp (hoặc dán link ảnh từ mạng), tự kéo tường &amp; công trình trong ô Căn cứ Chiến tranh rồi chép sang Làng chính.</p>
+          <span class="feat-tag">Độc quyền Windows</span>
         </article>
       </div>
     </div>
   </section>
 
-  <!-- ============================================================ GUIDE -->
+  <!-- =============================================== INTERACTIVE TOOLS -->
+  <section id="cong-cu">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">Tiện ích miễn phí ngay trên trình duyệt</span>
+        <h2 class="stroke">Ước tính Max Tường &amp; Kiểm tra Màn hình</h2>
+        <p>Tất cả tính toán chạy 100% cục bộ ngay trên trình duyệt của bạn — không gửi bất kỳ dữ liệu nào ra ngoài.</p>
+      </div>
+
+      <div class="tools-grid">
+        <div class="card tool-card">
+          <div class="tool-head">
+            <img src="assets/wall.png" alt="Tường">
+            <div>
+              <h3>Máy tính Ước tính Thời gian Max Tường</h3>
+              <p>Tính tổng Vàng/Dầu cần thiết và số ngày treo NHClash để hoàn thành bộ tường</p>
+            </div>
+          </div>
+
+          <div class="calc-form">
+            <div class="calc-row">
+              <div class="field">
+                <label for="calc-lvl">Nâng cấp tường</label>
+                <select id="calc-lvl">
+                  <option value="1000000">Cấp 12 → 13 (1.000.000 / đoạn)</option>
+                  <option value="2000000">Cấp 13 → 14 (2.000.000 / đoạn)</option>
+                  <option value="3000000">Cấp 14 → 15 (3.000.000 / đoạn)</option>
+                  <option value="5000000" selected>Cấp 15 → 16 (5.000.000 / đoạn)</option>
+                  <option value="7000000">Cấp 16 → 17 (7.000.000 / đoạn)</option>
+                  <option value="8000000">Cấp 17 → 18 (8.000.000 / đoạn)</option>
+                  <option value="9000000">Cấp 18 → 19 (9.000.000 / đoạn)</option>
+                </select>
+              </div>
+              <div class="field">
+                <label for="calc-pass">Giảm giá Vé Vàng</label>
+                <select id="calc-pass">
+                  <option value="0">Không có Vé Vàng (0%)</option>
+                  <option value="0.10">Giảm 10%</option>
+                  <option value="0.15">Giảm 15%</option>
+                  <option value="0.20" selected>Giảm tối đa 20%</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="calc-count"><span>Số đoạn tường còn lại</span><b class="mono" id="calc-count-val">325 đoạn</b></label>
+              <input id="calc-count" type="range" min="10" max="325" step="5" value="325">
+            </div>
+
+            <div class="calc-row">
+              <div class="field">
+                <label for="calc-rate"><span>Tốc độ farm (Vàng+Dầu/giờ)</span><b class="mono" id="calc-rate-val">14 triệu/h</b></label>
+                <input id="calc-rate" type="range" min="4" max="28" step="1" value="14">
+              </div>
+              <div class="field">
+                <label for="calc-hours"><span>Số giờ treo mỗi ngày</span><b class="mono" id="calc-hours-val">8 giờ/ngày</b></label>
+                <input id="calc-hours" type="range" min="1" max="24" step="1" value="8">
+              </div>
+            </div>
+          </div>
+
+          <div class="calc-out">
+            <div>
+              <div class="co-label">Tổng Vàng + Dầu cần</div>
+              <div class="co-val" id="out-cost">—</div>
+            </div>
+            <div>
+              <div class="co-label">Tổng giờ treo bot</div>
+              <div class="co-val" id="out-hours">—</div>
+            </div>
+            <div>
+              <div class="co-label">Dự kiến hoàn thành</div>
+              <div class="co-val" id="out-days" style="color: var(--green);">—</div>
+            </div>
+          </div>
+          <div class="calc-tip" id="out-tip"></div>
+        </div>
+
+        <div class="card tool-card">
+          <div class="tool-head">
+            <img src="assets/town_hall.png" alt="Tỉ lệ màn hình">
+            <div>
+              <h3>Kiểm tra Tỉ lệ Màn hình Thiết bị</h3>
+              <p>Đọc trực tiếp kích thước màn hình trên máy bạn (100% offline)</p>
+            </div>
+          </div>
+
+          <div class="ratio-box">
+            <button class="btn small" id="btn-check-ratio" type="button">Kiểm tra màn hình hiện tại</button>
+            <div class="ratio-result" id="ratio-result">
+              Bấm nút trên để kiểm tra xem tỉ lệ màn hình máy bạn đã được NHClash tối ưu sẵn hay chưa.
+            </div>
+          </div>
+
+          <div style="font-size:13.5px; color:var(--text-soft); font-weight:700;">Các tỉ lệ đã kiểm thử &amp; hỗ trợ chuẩn:</div>
+          <div class="ratio-chips">
+            <span>1:1 (900×900)</span>
+            <span>4:3 (1200×900)</span>
+            <span>16:10 (2880×1800)</span>
+            <span>16:9 (1600×900)</span>
+            <span>720p (1280×720)</span>
+            <span>19:9 (1900×900 Samsung)</span>
+            <span>20:9 (2400×1080)</span>
+            <span>20.5:9 (1640×720)</span>
+            <span>2.2:1 (3168×1440)</span>
+            <span>2.6:1 (2808×1080)</span>
+          </div>
+
+          <div class="tip" style="margin-top:14px;">
+            Hỗ trợ cả điện thoại có <b>camera đục lỗ / tai thỏ 1 bên</b> và <b>thanh điều hướng 3 nút</b> (Samsung, Xiaomi, Oppo, Vivo, Realme…).
+          </div>
+        </div>
+      </div>
+
+      <div class="card" style="margin-top:20px; overflow:hidden;">
+        <div class="compare-wrap">
+          <table class="cmp-table">
+            <thead>
+              <tr>
+                <th>Tính năng nổi bật</th>
+                <th>Windows (LDPlayer 9)</th>
+                <th>Android (Điện thoại / Cloud Phone)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>Farm Làng chính, Nâng tường &amp; Công trình (0 Ngọc)</td><td class="c-ok">✓ Đầy đủ</td><td class="c-ok">✓ Đầy đủ (1:1 .. 2,6:1)</td></tr>
+              <tr><td>Làng đêm 2.0 + Thu Xe Tiên dược (cỏ xanh &amp; hang đá)</td><td class="c-ok">✓ Đầy đủ</td><td class="c-ok">✓ Đầy đủ</td></tr>
+              <tr><td>Trò chơi Hội 4.000đ + Kinh đô Hội + Đóng góp quân</td><td class="c-ok">✓ Đầy đủ</td><td class="c-ok">✓ Đầy đủ</td></tr>
+              <tr><td>Đa tài khoản Supercell ID tự động chuyển thông minh</td><td class="c-ok">✓ Đầy đủ</td><td class="c-ok">✓ Đầy đủ</td></tr>
+              <tr><td>Đa giả lập (Song song &amp; Xoay vòng) + Tắt màn hình</td><td class="c-ok">✓ Có</td><td class="c-no">— Riêng bản PC</td></tr>
+              <tr><td>Sắp xếp nhà từ ảnh chụp / link mạng</td><td class="c-ok">✓ Có</td><td class="c-no">— Riêng bản PC</td></tr>
+              <tr><td>Tự động cập nhật trong app &amp; dùng chung hệ thống key</td><td class="c-ok">✓ Có (giữ userdata)</td><td class="c-ok">✓ Có (cài đè APK)</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================== GUIDE -->
   <section id="cai-dat">
     <div class="wrap">
       <div class="sec-head">
-        <h2 class="stroke">Hướng dẫn cài đặt</h2>
-        <p>Chọn bản bạn dùng, làm lần lượt từng bước. Mất khoảng 5–10 phút.</p>
+        <span class="eyebrow">Cài nhanh trong 5 phút</span>
+        <h2 class="stroke">Hướng dẫn cài đặt từng bước</h2>
+        <p>Chọn đúng nền tảng bạn đang dùng — không cần root điện thoại, không cần cài Python trên máy tính.</p>
       </div>
+
       <div class="tabs" role="tablist">
         <button class="tab" role="tab" id="tab-win" aria-controls="panel-win" aria-selected="true"><svg><use href="#i-win"/></svg>Windows · LDPlayer</button>
-        <button class="tab" role="tab" id="tab-apk" aria-controls="panel-apk" aria-selected="false"><svg><use href="#i-android"/></svg>Android · điện thoại</button>
+        <button class="tab" role="tab" id="tab-apk" aria-controls="panel-apk" aria-selected="false"><svg><use href="#i-android"/></svg>Android · Điện thoại</button>
       </div>
 
       <div class="panel" id="panel-win" role="tabpanel" aria-labelledby="tab-win">
         <div class="need">
-          <div><b>Máy tính Windows 10 / 11</b>Đủ khoẻ để chạy giả lập Android</div>
-          <div><b>Giả lập LDPlayer 9</b>Miễn phí tại ldplayer.net</div>
-          <div><b>Game để tiếng Việt</b>Bot đọc giao diện tiếng Việt</div>
+          <div><b>Windows 10 / 11 (64-bit)</b>Chạy thẳng file NHClash.exe</div>
+          <div><b>Giả lập LDPlayer 9</b>Tải miễn phí tại ldplayer.net</div>
+          <div><b>Game để Tiếng Việt</b>Bot đọc giao diện tiếng Việt</div>
         </div>
         <ol class="steps">
           <li class="card step">
             <h3>Cài LDPlayer 9 và Clash of Clans</h3>
-            <p>Tải LDPlayer 9 tại <a href="https://www.ldplayer.net" target="_blank" rel="noopener">ldplayer.net</a>, cài Clash of Clans từ CH Play trong giả lập và đăng nhập tài khoản của bạn.</p>
-            <p>Trong game: <span class="path">Cài đặt → Ngôn ngữ → Tiếng Việt</span></p>
+            <p>Cài Clash of Clans từ CH Play trong LDPlayer, đăng nhập làng của bạn rồi chỉnh: <span class="path">Cài đặt game → Ngôn ngữ → Tiếng Việt</span>.</p>
           </li>
           <li class="card step">
-            <h3>Chỉnh giả lập cho đúng</h3>
-            <p>Độ phân giải: <span class="path">Cài đặt LDPlayer → Nâng cao → Máy tính bảng 1600 × 900 (DPI 240)</span></p>
-            <p>Bật ADB: <span class="path">Cài đặt LDPlayer → Khác → Gỡ lỗi ADB → Kết nối cục bộ</span></p>
-            <p>Bấm Lưu rồi khởi động lại giả lập.</p>
-            <div class="tip">Bot đo chuẩn trên màn hình 1600 × 900. Để độ phân giải khác bot vẫn tự quy đổi, nhưng 1600 × 900 là chính xác nhất.</div>
+            <h3>Chỉnh độ phân giải &amp; bật ADB</h3>
+            <p>Độ phân giải chuẩn: <span class="path">Cài đặt LDPlayer → Nâng cao → Máy tính bảng 1600 × 900 (DPI 240)</span>.</p>
+            <p>Bật ADB: <span class="path">Cài đặt LDPlayer → Khác → Gỡ lỗi ADB → Kết nối cục bộ</span> rồi khởi động lại giả lập.</p>
           </li>
           <li class="card step">
-            <h3>Tải và mở NHClash</h3>
-            <p>Tải file <b>NHClash-Windows.zip</b>, bấm chuột phải → <b>Giải nén tất cả</b> (đừng mở thẳng trong file nén), rồi bấm đúp <b>NHClash.exe</b>.</p>
-            <div class="tip warn">Nếu Windows hiện "Windows đã bảo vệ PC": bấm <b>Thông tin thêm → Vẫn chạy</b>. App chưa có chữ ký số nên Windows chưa nhận ra, không phải virus.</div>
+            <h3>Tải và giải nén NHClash</h3>
+            <p>Tải <b>NHClash-Windows.zip</b>, bấm chuột phải → <b>Giải nén tất cả</b> ra một thư mục riêng, sau đó mở <b>NHClash.exe</b>.</p>
+            <div class="tip warn">Nếu Windows hiện "Windows đã bảo vệ PC": bấm <b>Thông tin thêm → Vẫn chạy</b> (app chưa mua chứng chỉ ký số thương mại nên SmartScreen cảnh báo nhầm).</div>
             <a class="btn small" data-dl="win" href="#">Tải NHClash-Windows.zip</a>
           </li>
           <li class="card step">
-            <h3>Kích hoạt key</h3>
-            <p>Lần đầu mở, app hiện <b>Mã máy</b>. Bấm sao chép, gửi mã cho admin để nhận key, dán key vào ô rồi bấm <b>Kích hoạt</b>. <a href="#key">Xem cách nhận key</a>.</p>
-          </li>
-          <li class="card step">
-            <h3>Chạy bot</h3>
-            <p>Mở game ở màn hình làng, trong app bấm <b>Bắt đầu</b> (phím F5). Muốn dừng bấm <b>Dừng</b> (F7).</p>
-            <p>Chỉnh điều kiện tìm làng, cách đánh, nâng tường… ở các trang bên trái app. Cài đặt tự lưu.</p>
+            <h3>Kích hoạt key &amp; Bấm Bắt đầu (F5)</h3>
+            <p>Mở app lần đầu sẽ hiện <b>Mã máy</b> → sao chép gửi admin để nhận key → dán key bấm <b>Kích hoạt</b> → mở game ở màn hình làng và bấm <b>Bắt đầu (F5)</b>.</p>
           </li>
         </ol>
       </div>
 
       <div class="panel" id="panel-apk" role="tabpanel" aria-labelledby="tab-apk" hidden>
         <div class="need">
-          <div><b>Android 7.0 trở lên</b>Không cần root</div>
-          <div><b>Clash of Clans đã cài</b>Đã đăng nhập tài khoản</div>
-          <div><b>Game để tiếng Việt</b>Bot đọc giao diện tiếng Việt</div>
+          <div><b>Android 7.0 trở lên</b>Hoàn toàn không cần root</div>
+          <div><b>Clash of Clans đã cài</b>Đăng nhập sẵn tài khoản</div>
+          <div><b>Game để Tiếng Việt</b>Tự cân chuẩn mọi tỉ lệ 1:1..2,6:1</div>
         </div>
         <ol class="steps">
           <li class="card step">
-            <h3>Cài app</h3>
-            <p>Tải file <b>NHClash.apk</b> rồi mở để cài. Máy hỏi thì cho phép <b>Cài ứng dụng không rõ nguồn gốc</b>. Play Protect cảnh báo thì chọn <b>Vẫn cài</b>.</p>
+            <h3>Tải &amp; cài đặt NHClash.apk</h3>
+            <p>Mở file <b>NHClash.apk</b> vừa tải, bật cho phép <b>Cài ứng dụng không rõ nguồn gốc</b>. Nếu Play Protect hiện cảnh báo, chọn <b>Vẫn cài</b>.</p>
             <a class="btn small green" data-dl="apk" href="#">Tải NHClash.apk</a>
           </li>
           <li class="card step">
-            <h3>Kích hoạt key</h3>
-            <p>Mở NHClash, màn hình hiện <b>Mã máy</b> → gửi admin để nhận key → dán key → bấm <b>Kích hoạt</b>.</p>
+            <h3>Kích hoạt key bản quyền</h3>
+            <p>Mở NHClash, sao chép <b>Mã máy</b> gửi admin nhận key → dán vào ô kích hoạt → bấm <b>Kích hoạt</b>.</p>
           </li>
           <li class="card step">
-            <h3>Bật Trợ năng</h3>
-            <p>Bấm <b>Bắt đầu</b> → <b>Mở Trợ năng</b> → chọn <b>NHClash</b> → <b>Bật</b>. Bot cần quyền này để chạm thay bạn.</p>
-            <div class="tip">Android 13 trở lên, nếu công tắc bị mờ hoặc báo "Cài đặt bị hạn chế": vào <span class="path">Cài đặt → Ứng dụng → NHClash → ⋮ (góc trên phải) → Cho phép cài đặt bị hạn chế</span> rồi bật lại.</div>
+            <h3>Bật Trợ năng (Accessibility)</h3>
+            <p>Bấm <b>Bắt đầu</b> → <b>Mở Trợ năng</b> → chọn <b>NHClash</b> → <b>Bật</b>.</p>
+            <div class="tip">Android 13+ nếu bị mờ nút bật ("Cài đặt bị hạn chế"): vào <span class="path">Cài đặt → Ứng dụng → NHClash → ⋮ (góc trên phải) → Cho phép cài đặt bị hạn chế</span> rồi quay lại bật Trợ năng.</div>
           </li>
           <li class="card step">
-            <h3>Cho phép quay màn hình</h3>
-            <p>Quay lại app, bấm <b>Bắt đầu</b> → cho phép quay màn hình để bot nhìn thấy game. Android 14 trở lên chọn <b>Toàn bộ màn hình</b> (không chọn "Một ứng dụng").</p>
-          </li>
-          <li class="card step">
-            <h3>Chạy bot</h3>
-            <p>App tự mở Clash of Clans và bắt đầu đánh. Trên màn hình game có nút nổi: <b>▶</b> chạy / <b>■</b> dừng, kéo để đổi chỗ.</p>
-            <p>Tắt hẳn: kéo thanh thông báo xuống → NHClash → <b>Tắt hẳn</b>.</p>
-            <div class="tip">Màn hình 16:9 là chuẩn nhất. Điện thoại màn dài bot tự căn theo mép, nếu thấy bấm lệch hãy chụp màn hình gửi admin để chỉnh.</div>
+            <h3>Cấp quyền quay màn hình &amp; Chạy bot</h3>
+            <p>Quay lại app bấm <b>Bắt đầu</b> → chọn <b>Toàn bộ màn hình</b> (trên Android 14+, không chọn "Một ứng dụng"). App tự mở game kèm nút nổi <b>▶ / ⏸ / ■</b> tiện lợi.</p>
           </li>
         </ol>
       </div>
     </div>
   </section>
 
-  <!-- ============================================================== KEY -->
+  <!-- ================================================================ KEY -->
   <section id="key">
     <div class="wrap">
       <div class="sec-head">
-        <h2 class="stroke">Nhận key</h2>
-        <p>Mỗi key gắn với máy của bạn. Bản Windows và Android dùng chung hệ thống key.</p>
+        <span class="eyebrow">Kích hoạt nhanh</span>
+        <h2 class="stroke">Nhận key bản quyền</h2>
+        <p>Mỗi key gắn cố định theo thiết bị; cả bản Windows và Android đều dùng chung 1 hệ thống key.</p>
       </div>
       <div class="key-grid">
-        <div class="card key-step"><div class="num">1</div><h3>Lấy mã máy</h3><p>Mở app NHClash, màn hình kích hoạt hiện <b>Mã máy</b> — bấm sao chép.</p></div>
-        <div class="card key-step"><div class="num">2</div><h3>Gửi cho admin</h3><p>Nhắn mã máy cho admin qua các kênh bên dưới để được cấp key.</p></div>
-        <div class="card key-step"><div class="num">3</div><h3>Dán key</h3><p>Dán key vào app, bấm <b>Kích hoạt</b> — xong, bấm Bắt đầu là chạy.</p></div>
+        <div class="card key-step"><div class="num">01</div><h3>Sao chép Mã máy</h3><p>Mở NHClash, màn hình kích hoạt hiện sẵn <b>Mã máy</b> — chỉ cần bấm 1 nút Sao chép.</p></div>
+        <div class="card key-step"><div class="num">02</div><h3>Gửi cho Admin</h3><p>Nhắn mã máy cho admin hoặc người giới thiệu NHClash qua kênh bên dưới.</p></div>
+        <div class="card key-step"><div class="num">03</div><h3>Dán key &amp; Chạy</h3><p>Dán key nhận được vào app, bấm <b>Kích hoạt</b> là sẵn sàng chạy ngay.</p></div>
       </div>
       <div class="card contact" id="contact">
         <p id="contact-text">Liên hệ admin để nhận key:</p>
@@ -416,36 +463,71 @@
     </div>
   </section>
 
-  <!-- ============================================================== FAQ -->
+  <!-- =============================================== RELEASE STATUS & SHA -->
+  <section id="cap-nhat">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">Minh bạch &amp; Xác minh file tải</span>
+        <h2 class="stroke">Trạng thái phiên bản &amp; Lịch sử cập nhật</h2>
+        <p>Tự động đồng bộ từ trang phát hành chính thức — kèm mã kiểm tra SHA-256 để bạn tự đối chiếu file tải về.</p>
+      </div>
+
+      <div class="status-grid">
+        <div class="card release-card">
+          <h3><span>Bản Windows (PC)</span><span class="pill" id="rel-win-ver">Đang tải…</span></h3>
+          <div style="font-size:13.8px; color:var(--muted);">Dung lượng: <b class="mono" id="rel-win-size" style="color:var(--text);">—</b> · Cập nhật: <b id="rel-win-date" style="color:var(--text);">—</b></div>
+          <div class="hash-box">
+            <span id="rel-win-sha">SHA-256: Đang đọc từ GitHub…</span>
+            <button class="copy-btn" type="button" data-copy="rel-win-sha">Chép</button>
+          </div>
+        </div>
+        <div class="card release-card">
+          <h3><span>Bản Android (APK)</span><span class="pill green" id="rel-apk-ver">Đang tải…</span></h3>
+          <div style="font-size:13.8px; color:var(--muted);">Dung lượng: <b class="mono" id="rel-apk-size" style="color:var(--text);">—</b> · Mã bản: <b class="mono" id="rel-apk-code" style="color:var(--text);">—</b></div>
+          <div class="hash-box">
+            <span id="rel-apk-sha">SHA-256: Đang đọc từ GitHub…</span>
+            <button class="copy-btn" type="button" data-copy="rel-apk-sha">Chép</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="card changes-card" id="changes">
+        <h3 id="changes-title">Ghi chú bản phát hành mới nhất</h3>
+        <ul id="changes-list"><li>Đang tải ghi chú cập nhật mới nhất…</li></ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================================ FAQ -->
   <section id="hoi-dap">
     <div class="wrap">
       <div class="sec-head">
-        <h2 class="stroke">Hỏi đáp</h2>
+        <span class="eyebrow">Giải đáp nhanh</span>
+        <h2 class="stroke">Câu hỏi thường gặp</h2>
       </div>
-      <div class="faq">
-        <details class="card"><summary>Bot có làm mất ngọc hay vật phẩm không?</summary>
-          <div class="ans"><p>Không. Bot chỉ bấm nâng tường khi hộp xác nhận đúng giá bằng vàng hoặc dầu; thấy ngọc là hủy. Bot không bao giờ dùng Nhẫn tường, dầu đen hay mua bằng ngọc.</p></div></details>
-        <details class="card"><summary>Windows / phần mềm diệt virus báo có hại?</summary>
-          <div class="ans"><p>App đóng gói bằng Python và chưa có chữ ký số nên đôi khi bị báo nhầm. Chọn <b>Thông tin thêm → Vẫn chạy</b>, hoặc thêm thư mục NHClash vào danh sách ngoại lệ của phần mềm diệt virus.</p></div></details>
-        <details class="card"><summary>Bot bấm lệch hoặc không nhận ra màn hình?</summary>
-          <div class="ans"><p>Kiểm tra lại: giả lập để 1600 × 900 (DPI 240), game để tiếng Việt, không có cửa sổ chat hay thông báo che màn hình khi bắt đầu.</p></div></details>
-        <details class="card"><summary>Đang chơi bằng điện thoại thì bot báo mất kết nối?</summary>
-          <div class="ans"><p>Một tài khoản chỉ vào được một máy cùng lúc. Khi bạn tự chơi ở máy khác, hãy dừng bot trước.</p></div></details>
-        <details class="card"><summary>Nâng tường tự động hoạt động thế nào?</summary>
-          <div class="ans"><p>Bật ở trang <b>Làng &amp; Nâng cấp</b>. Bot đánh farm tới khi kho vàng hoặc dầu gần đầy (~90%), rồi nâng các đoạn tường rẻ nhất (nhiều đoạn một lần) cho tới khi còn mức "Giữ lại" bạn đặt, sau đó đánh tiếp.</p>
-          <p>Muốn dùng cả vàng lẫn dầu thì chọn <b>Dùng: Cả hai</b>. Đừng để "Giữ lại vàng" bằng 0 — bot cần vàng để tìm trận. Lần đầu nên để <b>Chạy thử</b> để xem bot làm gì mà chưa tốn tài nguyên.</p>
-          <p>Game cần ít nhất <b>1 thợ xây rảnh</b> mới cho nâng tường (ô "1/6" góc dưới phải): thợ bận hết thì bot chờ, đánh farm tiếp. Để <b>Nâng đến cấp: Tối đa</b> thì bot nâng tới cấp cao nhất nhà chính cho phép (nhà chính 13 → tường 14, 14 → 15, 15 → 16, 16 → 17, 17 → 18, 18 → 19).</p></div></details>
-        <details class="card"><summary>Cập nhật bản mới thế nào?</summary>
-          <div class="ans"><p>Tải lại ở trang này — nút tải luôn là bản mới nhất. Windows: giải nén đè lên thư mục cũ (giữ thư mục <b>userdata</b> để không mất cài đặt và key). Android: cài đè lên app cũ, không cần gỡ.</p></div></details>
-        <details class="card"><summary>Windows báo "Smart App Control blocked an app" / không cho chạy NHClash.exe?</summary>
-          <div class="ans"><p>Đó là tính năng bảo vệ của Windows 11: chặn mọi phần mềm chưa ký số, không phải lỗi của tool. Cách mở: Start → gõ <b>Smart App Control</b> → mở mục đó → chọn <b>Off (Tắt)</b> → chạy lại NHClash.exe. Nếu chỉ hiện "Windows protected your PC" thì bấm <b>More info → Run anyway</b>.</p>
-          <p>Không muốn tắt: cài bản Android (NHClash.apk) ngay trong giả lập LDPlayer — bot chạy bên trong giả lập nên Windows không chặn.</p></div></details>
-        <details class="card"><summary>Có cần root điện thoại không?</summary>
-          <div class="ans"><p>Không. App dùng Trợ năng để chạm và quyền quay màn hình để nhìn game, giống như bạn tự bấm.</p></div></details>
+
+      <div class="faq-search">
+        <svg><use href="#i-search"/></svg>
+        <input id="faq-filter" type="search" placeholder="Tìm nhanh: ngọc, tường, 720p, trợ năng, smart app control, xe dầu, bảo mật…">
       </div>
-      <div class="card changes" id="changes" hidden>
-        <h3 id="changes-title">Có gì mới</h3>
-        <ul id="changes-list"></ul>
+
+      <div class="faq" id="faq-list">
+        <details class="card"><summary>NHClash có thu thập thông tin cá nhân hay tài khoản game không?</summary>
+          <div class="ans"><p><b>Tuyệt đối không.</b> Ứng dụng và trang web không thu thập email, số điện thoại, Supercell ID, mật khẩu, IP hay lịch sử chơi của bạn. Mọi hình ảnh nhận diện màn hình đều xử lý tức thì trong RAM trên thiết bị của bạn và hủy ngay sau đó. Xem chi tiết tại <a href="privacy.html">Chính sách Bảo mật</a>.</p></div></details>
+        <details class="card"><summary>Bot có bao giờ bấm nhầm làm mất Ngọc hay Nhẫn tường không?</summary>
+          <div class="ans"><p>Không. Mọi thao tác nâng tường, nâng công trình và mở Siêu quân đều có chốt kiểm tra biểu tượng tài nguyên &amp; màu nút trước khi bấm; thấy biểu tượng Ngọc hay Nhẫn tường là tự động hủy ngay.</p></div></details>
+        <details class="card"><summary>Windows báo "Smart App Control" hoặc diệt virus cảnh báo nhầm?</summary>
+          <div class="ans"><p>Do file <code>NHClash.exe</code> chưa mua chứng chỉ ký số thương mại nên Windows Defender / SmartScreen đôi khi hiện cảnh báo với phần mềm mới. Với SmartScreen: bấm <b>Thông tin thêm → Vẫn chạy</b>. Với <b>Smart App Control</b> trên Windows 11: Start → gõ <b>Smart App Control</b> → chuyển sang <b>Off</b>, hoặc cài bản Android (<code>NHClash.apk</code>) ngay trong LDPlayer.</p></div></details>
+        <details class="card"><summary>Nâng tường tự động hoạt động thế nào &amp; cần điều kiện gì?</summary>
+          <div class="ans"><p>Bật ở mục <b>Làng &amp; Nâng cấp</b>. Game cần tối thiểu <b>1 thợ xây rảnh</b> để nâng tường. Khi kho Vàng hoặc Dầu đạt ~90%, bot tự mở bảng thợ xây, chọn nhiều đoạn tường cùng cấp và nâng liên tiếp cho tới mức "Giữ lại" bạn đặt rồi quay lại farm tiếp.</p></div></details>
+        <details class="card"><summary>Xe Tiên dược (xe dầu) Làng đêm có nhận được trên phông cỏ xanh &amp; màn hình lạ không?</summary>
+          <div class="ans"><p>Có. Từ bản mới nhất, bộ nhận diện Xe Tiên dược hỗ trợ cả phông cỏ xanh mặc định lẫn phông hang đá, phủ đầy đủ các tỉ lệ 1:1..2,6:1 (bao gồm 720p và Samsung 19:9), tự thu nhỏ 2 lần và định vị lại theo Thuyền Thợ xây khi xe khuất góc.</p></div></details>
+        <details class="card"><summary>Cập nhật bản mới có bị mất cài đặt hay key không?</summary>
+          <div class="ans"><p>Không. Cả Windows lẫn Android đều tích hợp sẵn nút <b>Tự động cập nhật</b> trong app, tự động giữ nguyên 100% key và thư mục cấu hình <code>userdata</code>. Nếu cập nhật thủ công: Windows giải nén đè (giữ thư mục <code>userdata</code>), Android cài đè file APK mới trực tiếp.</p></div></details>
+        <details class="card"><summary>Đang mở game trên điện thoại khác thì bot báo mất kết nối?</summary>
+          <div class="ans"><p>Clash of Clans chỉ cho phép 1 thiết bị đăng nhập 1 tài khoản tại cùng thời điểm. Khi bạn muốn tự chơi tay, hãy tạm dừng hoặc dừng bot trước.</p></div></details>
+        <details class="card"><summary>Có cần root điện thoại Android không?</summary>
+          <div class="ans"><p>Không cần root. NHClash chỉ sử dụng quyền Trợ năng (Accessibility) để chạm màn hình và quyền Quay màn hình để đọc hình ảnh game cục bộ ngay trên máy.</p></div></details>
       </div>
     </div>
   </section>
@@ -453,26 +535,72 @@
 
 <footer>
   <div class="wrap">
-    <p><b>NHClash</b> là công cụ của bên thứ ba, không liên kết với Supercell. Clash of Clans là thương hiệu của Supercell; hình ảnh game dùng theo Fan Content Policy của Supercell.</p>
-    <p>Dùng bot có thể trái với điều khoản của trò chơi — bạn tự cân nhắc khi sử dụng.</p>
+    <div class="foot-grid">
+      <div class="foot-col">
+        <a class="brand" href="#top" style="margin-bottom:10px;">
+          <img src="assets/logo.png" alt="NHClash">
+          <span>NHClash<small>0 thu thập dữ liệu</small></span>
+        </a>
+        <p style="margin:6px 0 0; max-width:420px;">Công cụ hỗ trợ tự động hóa Clash of Clans cho Windows (LDPlayer) và Android. Không liên kết với Supercell; hình ảnh game được dùng theo Fan Content Policy của Supercell.</p>
+      </div>
+      <div class="foot-col">
+        <h4>Điều hướng</h4>
+        <ul>
+          <li><a href="#tai-ve">Tải NHClash</a></li>
+          <li><a href="#tinh-nang">Tính năng nổi bật</a></li>
+          <li><a href="#cong-cu">Ước tính Max Tường</a></li>
+          <li><a href="#cai-dat">Hướng dẫn cài đặt</a></li>
+          <li><a href="#cap-nhat">Phiên bản &amp; SHA-256</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h4>Pháp lý &amp; Quyền riêng tư</h4>
+        <ul>
+          <li><a href="privacy.html">Chính sách Bảo mật (0 thu thập)</a></li>
+          <li><a href="terms.html">Điều khoản Sử dụng</a></li>
+          <li><a href="#hoi-dap">Câu hỏi thường gặp</a></li>
+          <li><a href="#key">Hướng dẫn kích hoạt key</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 NHClash · Trang web tĩnh 0 Cookie · 0 Analytics · 0 Theo dõi.</span>
+      <span>Clash of Clans là thương hiệu đã đăng ký của Supercell. Sử dụng công cụ bên thứ ba là quyết định tự nguyện của người dùng.</span>
+    </div>
   </div>
 </footer>
 
 <script>
-/* ===== Cấu hình trang (tools/publish_web.py tự điền "repo"; thông tin liên hệ thì sửa trực tiếp ở đây) ===== */
+/* ===== Cấu hình trang (tools/publish_web.py tự điền "repo"; thông tin liên hệ sửa trực tiếp tại đây) ===== */
 const SITE = {
-  repo: "NguyenHoang-pluto/autococ",            // "ten-tai-khoan/AutoCoC" — để trống: tự nhận khi trang chạy trên GitHub Pages
-  contact: {           // link liên hệ để khách nhận key; để trống thì ẩn nút đó
+  repo: "NguyenHoang-pluto/autococ",            // "ten-tai-khoan/autococ" — để trống: tự nhận khi chạy trên GitHub Pages
+  contact: {           // điền link để hiện nút liên hệ nhận key
     zalo: "",          // vd "https://zalo.me/0912345678"
     facebook: "",      // vd "https://m.me/ten-trang"
     telegram: "",      // vd "https://t.me/ten"
   },
 };
+const DEFAULT_REPO = "NguyenHoang-pluto/autococ";
 const FILES = { win: "NHClash-Windows.zip", apk: "NHClash.apk" };
 
 (function () {
   "use strict";
-  // ---- repo: trang GitHub Pages "ten.github.io/AutoCoC" -> "ten/AutoCoC"
+
+  // ---- Mobile nav menu
+  const navToggle = document.getElementById("nav-toggle");
+  const navLinks = document.getElementById("nav-links");
+  if (navToggle && navLinks) {
+    navToggle.addEventListener("click", () => {
+      const open = navLinks.classList.toggle("open");
+      navToggle.setAttribute("aria-expanded", open ? "true" : "false");
+    });
+    navLinks.querySelectorAll("a").forEach((a) => a.addEventListener("click", () => {
+      navLinks.classList.remove("open");
+      navToggle.setAttribute("aria-expanded", "false");
+    }));
+  }
+
+  // ---- Repo & Download URLs
   let repo = SITE.repo;
   const host = location.hostname;
   if (!repo && host.endsWith(".github.io")) {
@@ -480,80 +608,224 @@ const FILES = { win: "NHClash-Windows.zip", apk: "NHClash.apk" };
     const first = location.pathname.split("/").filter(Boolean)[0];
     repo = owner + "/" + (first || host);
   }
+  const activeRepo = repo || DEFAULT_REPO;
   const local = location.protocol === "file:";
-  const link = (key) => repo ? `https://github.com/${repo}/releases/latest/download/${FILES[key]}`
-    : local ? `../release/${FILES[key]}` : "#cai-dat";
-  const winBtns = [document.getElementById("dl-win"), ...document.querySelectorAll('[data-dl="win"]')];
-  const apkBtns = [document.getElementById("dl-apk"), ...document.querySelectorAll('[data-dl="apk"]')];
-  winBtns.forEach((a) => { a.href = link("win"); });
-  apkBtns.forEach((a) => { a.href = link("apk"); });
+  const dlLink = (key) => repo
+    ? `https://github.com/${repo}/releases/latest/download/${FILES[key]}`
+    : local ? `../release/${FILES[key]}` : `https://github.com/${activeRepo}/releases/latest/download/${FILES[key]}`;
 
-  // ---- tabs
+  [document.getElementById("dl-win"), ...document.querySelectorAll('[data-dl="win"]')].forEach((a) => {
+    if (a) a.href = dlLink("win");
+  });
+  [document.getElementById("dl-apk"), ...document.querySelectorAll('[data-dl="apk"]')].forEach((a) => {
+    if (a) a.href = dlLink("apk");
+  });
+
+  // ---- Guide Tabs
   const tabs = [document.getElementById("tab-win"), document.getElementById("tab-apk")];
-  function select(tab) {
+  function selectTab(tab) {
     tabs.forEach((t) => {
       const on = t === tab;
       t.setAttribute("aria-selected", on ? "true" : "false");
       document.getElementById(t.getAttribute("aria-controls")).hidden = !on;
     });
   }
-  tabs.forEach((t) => t.addEventListener("click", () => select(t)));
-  // điện thoại Android: mở sẵn hướng dẫn Android và đưa nút Android lên trước
+  tabs.forEach((t) => t.addEventListener("click", () => selectTab(t)));
   if (/Android/i.test(navigator.userAgent)) {
-    select(tabs[1]);
+    selectTab(tabs[1]);
     const cta = document.querySelector(".cta");
-    cta.insertBefore(document.getElementById("dl-apk"), cta.firstChild);
+    if (cta) cta.insertBefore(document.getElementById("dl-apk"), cta.firstChild);
   }
 
-  // ---- liên hệ
+  // ---- Contact Buttons
   const contact = document.getElementById("contact");
-  const names = { zalo: "Zalo", facebook: "Facebook", telegram: "Telegram" };
-  let any = false;
+  const contactNames = { zalo: "Zalo", facebook: "Facebook", telegram: "Telegram" };
+  let hasContact = false;
   Object.entries(SITE.contact).forEach(([k, url]) => {
     if (!url) return;
-    any = true;
+    hasContact = true;
     const a = document.createElement("a");
     a.className = "btn small" + (k === "zalo" ? "" : " green");
-    a.href = url; a.target = "_blank"; a.rel = "noopener";
-    a.innerHTML = '<svg><use href="#i-chat"/></svg><span class="label">' + names[k] + "</span>";
+    a.href = url;
+    a.target = "_blank";
+    a.rel = "noopener noreferrer";
+    a.innerHTML = '<svg><use href="#i-chat"/></svg><span class="label">' + contactNames[k] + "</span>";
     contact.appendChild(a);
   });
-  if (!any) document.getElementById("contact-text").textContent = "Liên hệ người đã giới thiệu NHClash cho bạn để nhận key.";
+  if (!hasContact) {
+    document.getElementById("contact-text").textContent = "Liên hệ trực tiếp người đã giới thiệu NHClash cho bạn để nhận key kích hoạt.";
+  }
 
-  // ---- bản mới nhất: ngày cập nhật, dung lượng, ghi chú, tổng lượt tải (đọc từ GitHub Releases)
-  if (!repo) return;
-  const mb = (b) => (b / 1048576).toLocaleString("vi-VN", { maximumFractionDigits: b < 10485760 ? 1 : 0 }) + " MB";
-  fetch(`https://api.github.com/repos/${repo}/releases?per_page=100`, { headers: { Accept: "application/vnd.github+json" } })
+  // ---- Formatters
+  const fmtInt = (n) => Math.round(Number(n) || 0).toLocaleString("vi-VN");
+  const fmtShort = (n) => {
+    n = Number(n) || 0;
+    if (n >= 1e9) return (n / 1e9).toLocaleString("vi-VN", { maximumFractionDigits: 2 }) + " tỷ";
+    if (n >= 1e6) return (n / 1e6).toLocaleString("vi-VN", { maximumFractionDigits: 1 }) + " triệu";
+    if (n >= 1e3) return (n / 1e3).toLocaleString("vi-VN", { maximumFractionDigits: 1 }) + " nghìn";
+    return fmtInt(n);
+  };
+  const fmtHours = (h) => {
+    h = Number(h) || 0;
+    if (h >= 1000) return Math.round(h).toLocaleString("vi-VN") + " giờ";
+    return h.toLocaleString("vi-VN", { maximumFractionDigits: 1 }) + " giờ";
+  };
+  const fmtMb = (b) => (b / 1048576).toLocaleString("vi-VN", { maximumFractionDigits: b < 10485760 ? 1 : 0 }) + " MB";
+
+  // ---- Wall Calculator (100% client-side)
+  const elLvl = document.getElementById("calc-lvl");
+  const elPass = document.getElementById("calc-pass");
+  const elCount = document.getElementById("calc-count");
+  const elRate = document.getElementById("calc-rate");
+  const elHours = document.getElementById("calc-hours");
+
+  function updateCalc() {
+    const unit = Number(elLvl.value) * (1 - Number(elPass.value));
+    const cnt = Number(elCount.value);
+    const rate = Number(elRate.value) * 1e6;
+    const hrsDay = Number(elHours.value);
+    const total = unit * cnt;
+    const totalHrs = total / rate;
+    const days = totalHrs / hrsDay;
+
+    document.getElementById("calc-count-val").textContent = cnt + " đoạn";
+    document.getElementById("calc-rate-val").textContent = elRate.value + " triệu/h";
+    document.getElementById("calc-hours-val").textContent = hrsDay + " giờ/ngày";
+    document.getElementById("out-cost").textContent = fmtShort(total);
+    document.getElementById("out-hours").textContent = fmtHours(totalHrs);
+    document.getElementById("out-days").textContent = days < 1
+      ? Math.ceil(totalHrs) + " giờ"
+      : days.toLocaleString("vi-VN", { maximumFractionDigits: 1 }) + " ngày";
+    document.getElementById("out-tip").textContent =
+      `Gợi ý: Với giá ${fmtShort(unit)}/đoạn, hãy bật chế độ Nhắm tài nguyên + Nâng tường “Cả hai (Vàng & Dầu)” và chừa 1 thợ xây rảnh để đạt tiến độ tối đa.`;
+  }
+  [elLvl, elPass, elCount, elRate, elHours].forEach((el) => el.addEventListener("input", updateCalc));
+  updateCalc();
+
+  // ---- Screen Ratio Checker (100% offline in browser)
+  const btnRatio = document.getElementById("btn-check-ratio");
+  if (btnRatio) {
+    btnRatio.addEventListener("click", () => {
+      const dpr = window.devicePixelRatio || 1;
+      const w = Math.round(Math.max(screen.width, screen.height) * dpr);
+      const h = Math.round(Math.min(screen.width, screen.height) * dpr);
+      const ratio = w / Math.max(1, h);
+      const normW = Math.round(900 * ratio);
+      const ok = ratio >= 1.0 && ratio <= 2.65;
+      const el = document.getElementById("ratio-result");
+      el.innerHTML = ok
+        ? `<b>✓ Đã hỗ trợ chuẩn!</b> Màn hình ngang ước tính <span class="mono">${w}×${h}</span> (quy đổi <span class="mono">${normW}×900</span>, tỉ lệ <span class="mono">${ratio.toFixed(2)}:1</span>) nằm trọn trong vùng tối ưu 1:1..2,6:1 của NHClash.`
+        : `Màn hình đo được <span class="mono">${w}×${h}</span> (tỉ lệ <span class="mono">${ratio.toFixed(2)}:1</span>). Hãy mở game chế độ ngang hoặc đặt LDPlayer 1600×900 để đạt độ chuẩn cao nhất.`;
+    });
+  }
+
+  // ---- Searchable FAQ
+  const faqInput = document.getElementById("faq-filter");
+  if (faqInput) {
+    const items = [...document.querySelectorAll("#faq-list details")];
+    faqInput.addEventListener("input", () => {
+      const q = faqInput.value.trim().toLowerCase();
+      items.forEach((d) => {
+        const hit = !q || d.textContent.toLowerCase().includes(q);
+        d.hidden = !hit;
+        if (q && hit) d.open = true;
+      });
+    });
+  }
+
+  // ---- Copy SHA-256 buttons
+  document.querySelectorAll("[data-copy]").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const target = document.getElementById(btn.dataset.copy);
+      if (!target) return;
+      const txt = target.textContent.replace(/^SHA-256:\s*/i, "").trim();
+      if (navigator.clipboard && txt && !txt.includes("Đang")) {
+        navigator.clipboard.writeText(txt).then(() => {
+          const prev = btn.textContent;
+          btn.textContent = "Đã chép ✓";
+          setTimeout(() => { btn.textContent = prev; }, 1600);
+        }).catch(() => {});
+      }
+    });
+  });
+
+  // ---- 100% REAL live data from GitHub version.json + GitHub Releases API
+  function applyManifest(m) {
+    if (!m || typeof m !== "object") return;
+    const win = m.windows || {};
+    const apk = m.android || {};
+    const upd = m.updated_at ? new Date(m.updated_at).toLocaleDateString("vi-VN", { day: "2-digit", month: "2-digit", year: "numeric" }) : "";
+    if (win.version) {
+      document.getElementById("rel-win-ver").textContent = "v" + win.version;
+      document.getElementById("kpi-win-ver").textContent = "v" + win.version;
+    }
+    if (win.size) {
+      document.getElementById("rel-win-size").textContent = fmtMb(win.size);
+      document.getElementById("kpi-win-size").textContent = fmtMb(win.size);
+      document.getElementById("dl-win-sub").textContent = "LDPlayer 9 · " + fmtMb(win.size);
+    }
+    if (win.sha256) document.getElementById("rel-win-sha").textContent = "SHA-256: " + win.sha256;
+    if (upd) {
+      document.getElementById("rel-win-date").textContent = upd;
+      document.getElementById("ver").innerHTML = "Bản mới nhất · cập nhật <b></b>";
+      document.querySelector("#ver b").textContent = upd;
+      document.getElementById("hero-ver-pill").textContent =
+        `Bản mới nhất${win.version ? " · PC v" + win.version : ""}${apk.version ? " · APK v" + apk.version : ""}`;
+    }
+    if (apk.version) {
+      document.getElementById("rel-apk-ver").textContent = "v" + apk.version;
+      document.getElementById("kpi-apk-ver").textContent = "v" + apk.version;
+    }
+    if (apk.size) {
+      document.getElementById("rel-apk-size").textContent = fmtMb(apk.size);
+      document.getElementById("kpi-apk-size").textContent = fmtMb(apk.size);
+      document.getElementById("dl-apk-sub").textContent = "APK · " + fmtMb(apk.size) + " · 0 root";
+    }
+    if (apk.version_code) {
+      document.getElementById("rel-apk-code").textContent = "#" + apk.version_code;
+      document.getElementById("kpi-apk-code").textContent = "#" + apk.version_code;
+    }
+    if (apk.sha256) document.getElementById("rel-apk-sha").textContent = "SHA-256: " + apk.sha256;
+
+    const notes = (win.notes && win.notes.length ? win.notes : apk.notes) || [];
+    if (notes.length) {
+      const ul = document.getElementById("changes-list");
+      ul.innerHTML = "";
+      notes.forEach((line) => {
+        const li = document.createElement("li");
+        li.textContent = line;
+        ul.appendChild(li);
+      });
+      if (upd) document.getElementById("changes-title").textContent = "Ghi chú bản phát hành — " + upd;
+    }
+  }
+
+  const manifestUrl = `https://raw.githubusercontent.com/${activeRepo}/main/version.json?_t=${Math.floor(Date.now() / 60000)}`;
+  fetch(manifestUrl)
+    .then((r) => (r.ok ? r.json() : Promise.reject(r.status)))
+    .then(applyManifest)
+    .catch(() => {
+      document.getElementById("rel-win-sha").textContent = "SHA-256: Không tải được version.json (kiểm tra kết nối mạng)";
+      document.getElementById("rel-apk-sha").textContent = "SHA-256: Không tải được version.json (kiểm tra kết nối mạng)";
+    });
+
+  fetch(`https://api.github.com/repos/${activeRepo}/releases?per_page=100`, { headers: { Accept: "application/vnd.github+json" } })
     .then((r) => (r.ok ? r.json() : Promise.reject(r.status)))
     .then((list) => {
-      const rels = list.filter((r) => !r.draft && !r.prerelease)
-        .sort((a, b) => new Date(b.published_at) - new Date(a.published_at));
-      if (!rels.length) return;
-      const rel = rels[0];
-      const date = new Date(rel.published_at).toLocaleDateString("vi-VN", { day: "2-digit", month: "2-digit", year: "numeric" });
-      document.getElementById("ver").innerHTML = "Bản mới nhất · cập nhật <b></b>";
-      document.querySelector("#ver b").textContent = date;
-      (rel.assets || []).forEach((a) => {
-        if (a.name === FILES.win) document.getElementById("dl-win-sub").textContent = "Giả lập LDPlayer 9 · " + mb(a.size);
-        if (a.name === FILES.apk) document.getElementById("dl-apk-sub").textContent = "APK · " + mb(a.size) + " · không cần root";
-      });
+      const rels = list.filter((r) => !r.draft && !r.prerelease);
       let downloads = 0;
       rels.forEach((r) => (r.assets || []).forEach((a) => { downloads += a.download_count || 0; }));
-      if (downloads >= 50) {
+      document.getElementById("kpi-downloads").textContent = fmtInt(downloads);
+      if (downloads > 0) {
         const s = document.createElement("span");
-        s.innerHTML = "<b></b> lượt tải";
-        s.querySelector("b").textContent = downloads.toLocaleString("vi-VN");
-        document.querySelector(".meta").appendChild(s);
-      }
-      const lines = (rel.body || "").split(/\r?\n/).map((l) => l.replace(/^\s*[-*•]\s*/, "").trim()).filter(Boolean);
-      if (lines.length) {
-        const ul = document.getElementById("changes-list");
-        lines.slice(0, 12).forEach((l) => { const li = document.createElement("li"); li.textContent = l; ul.appendChild(li); });
-        document.getElementById("changes-title").textContent = "Có gì mới — bản " + date;
-        document.getElementById("changes").hidden = false;
+        s.innerHTML = "<b></b> lượt tải thực tế";
+        s.querySelector("b").textContent = fmtInt(downloads);
+        document.getElementById("hero-meta").appendChild(s);
       }
     })
-    .catch(() => {});
+    .catch(() => {
+      document.getElementById("kpi-downloads").textContent = "—";
+    });
 })();
 </script>
 </body>
